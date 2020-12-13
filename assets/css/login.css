@@ -1,0 +1,13 @@
+.logo{
+    background-color: #e6e6e6;
+    width: 150px;
+    height: 150px;
+    position: relative;
+    left: 100px;
+    border-radius: 75px;
+}
+.tulisan-logo{
+    color: gray; 
+    position: relative; 
+    top: 50px;
+}
