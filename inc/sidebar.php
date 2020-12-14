@@ -10,10 +10,10 @@
               <li class="menu-header">Dashboard</li>
               <li><a class='nav-link' href="dashboard.php" style='color:#6777ef;'><i class="fas fa-tachometer-alt"></i> <span>Dashboard</span></a></li>
               <li class="menu-header">Kendaraan</li>
-              <li><a class="nav-link" href="datatables-mobil.php"><i class="fas fa-plus"></i> <span>Merek</span></a></li>
-              <li><a class="nav-link" href="datatables-mobil.php"><i class="fas fa-car"></i> <span>Mobil</span></a></li>
+              <li><a class="nav-link" href="manage-merek.php"><i class="fas fa-plus"></i> <span>Merek</span></a></li>
+              <li><a class="nav-link" href="manage-mobil.php"><i class="fas fa-car"></i> <span>Mobil</span></a></li>
               <li class="menu-header">Transaksi</li>
-              <li><a class="nav-link" href="datatables-rent.php"><i class="fas fa-cart-arrow-down"></i> <span>Pesanan</span></a></li>
+              <li><a class="nav-link" href="manage-pesanan.php"><i class="fas fa-cart-arrow-down"></i> <span>Pesanan</span></a></li>
               <!-- <li><a class="nav-link" href="datatables-transact.php"><i class="fas fa-money-check-alt"></i> <span>Transaction Table</span></a></li> -->
               <li class="menu-header">Users</li>
               <li><a class="nav-link" href="manage-admin.php"><i class="fas fa-user-shield"></i> <span>Admin</span></a></li>

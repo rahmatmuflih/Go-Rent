@@ -14,7 +14,7 @@ $sql = "delete from admin  WHERE id=:id";
 $query = $dbh->prepare($sql);
 $query -> bindParam(':id',$id, PDO::PARAM_STR);
 $query -> execute();
-$msg="Page data updated  successfully";
+$msg="Data Berhasil dihapus";
 
 }
  ?>
@@ -112,7 +112,7 @@ $msg="Page data updated  successfully";
 					<td><?php echo htmlentities($result->updationDate);?></td>
                     <td>
                         <!-- <a href="edit-admin.php?id=<?php echo $result->id;?>" class="btn btn-sm btn-primary"><i class="fas fa-edit"></i></a> -->
-                        <a href="manage-admin.php?id=<?php echo $result->id;?>" onclick="return confirm('Do you want to delete');" class="btn btn-sm btn-danger"><i class="fas fa-trash"></i></a>
+                        <a href="manage-admin.php?del=<?php echo $result->id;?>" onclick="return confirm('Do you want to delete');" class="btn btn-sm btn-danger"><i class="fas fa-trash"></i></a>
                     </td>
                 </tr>
                 <?php $cnt=$cnt+1; }} ?>

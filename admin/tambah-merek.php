@@ -2,28 +2,31 @@
 session_start();
 error_reporting(0);
 include('../inc/koneksi.php');
-if(strlen($_SESSION['alogin'])==0)
-	{	
-header('location:index.php');
+if(strlen($_SESSION['alogin'])==0){	
+    header('location:index.php');
 }
 else{
-if(isset($_GET['del']))
-{
-$id=$_GET['del'];
-$sql = "delete from users  WHERE id_user=:id";
-$query = $dbh->prepare($sql);
-$query -> bindParam(':id',$id, PDO::PARAM_STR);
-$query -> execute();
-$msg="Data Berhasil dihapus";
-
-}
- ?>
+    if(isset($_POST['submit'])){
+        $merek=$_POST['merek'];
+        $sql="INSERT INTO  merek(NamaMerek) VALUES(:merek)";
+        $query = $dbh->prepare($sql);
+        $query->bindParam(':merek',$merek,PDO::PARAM_STR);
+        $query->execute();
+        $lastInsertId = $dbh->lastInsertId();
+        if($lastInsertId){
+            $msg="Merek Berhasil ditambahkan";
+        }
+        else {
+            $error="Terjadi kesalahan. Coba lagi!";
+        }
+    }
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta content="width=device-width, initial-scale=1, maximum-scale=1, shrink-to-fit=no" name="viewport">
-  <title>Manage Customers</title>
+  <title>Tambah Merek</title>
 
   <!-- General CSS Files -->
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
@@ -81,47 +84,28 @@ $msg="Data Berhasil dihapus";
     <div class="main-content">
     <section class="section">
         <div class="section-header">
-            <h1>Data Customers</h1>
+            <h1>Form Tambah Merek</h1>
         </div>
-        <!-- <a href="tambah-admin.php" class="btn btn-primary mb-3"><i class="fas fa-plus"></i> Tambah admin</a> -->
-        <?php if($error){?><div class="alert alert-danger alert-dismissible fade show" role="alert">:<?php echo htmlentities($error); ?> </div><?php } 
-				else if($msg){?><div class="alert alert-success alert-dismissible fade show" role="alert"><?php echo htmlentities($msg); ?> </div><?php }?>
-        <table class="table table-hover table-striped table-border">
-        <thead>
-            <tr>
-                <th>No </th>
-                <th>Nama</th>
-                <th>Email</th>
-                <th>No Telepon</th>
-                <th>Tanggal Daftar</th>
-                <th>Aksi</th>
-            </tr>
-        </thead>
-        <tbody>
-            <?php 
-                $sql = "SELECT * from  users";
-                $query = $dbh -> prepare($sql);
-                $query->execute();
-                $results=$query->fetchAll(PDO::FETCH_OBJ);
-
-                $cnt=1;
-                if($query->rowCount() > 0){
-                    foreach($results as $result){
-            ?>	
-                <tr>
-                    <td><?php echo htmlentities($cnt);?></td>
-					<td><?php echo htmlentities($result->NamaLengkap);?></td>
-					<td><?php echo htmlentities($result->Email);?></td>
-					<td><?php echo htmlentities($result->no_telepon);?></td>
-					<td><?php echo htmlentities($result->RedDate);?></td>
-                    <td>
-                        <a href="edit-users.php?id=<?php echo $result->id_user;?>" class="btn btn-sm btn-primary"><i class="fas fa-edit"></i></a>
-                        <a href="manage-users.php?del=<?php echo $result->id_user;?>" onclick="return confirm('Do you want to delete');" class="btn btn-sm btn-danger"><i class="fas fa-trash"></i></a>
-                    </td>
-                </tr>
-                <?php $cnt=$cnt+1; }} ?>
-        </tbody>
-        </table>
+        <div class="card">
+            <div class="card-body">
+            <form name="chngpwd" method="POST" onSubmit="return valid();">
+            <?php if($error){?><div class="alert alert-danger alert-dismissible fade show" role="alert">:<?php echo htmlentities($error); ?> </div><?php } 
+				    else if($msg){?><div class="alert alert-success alert-dismissible fade show" role="alert"><?php echo htmlentities($msg); ?> </div><?php }?>
+            <div class="row">
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <label for="">Nama Merek</label>
+                            <input type="text" name="merek" class="form-control" placeholder="contoh: toyota,daihatsu dll" required>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                            <button Type="submit" name="submit" class="btn btn-primary mt-4">Simpan</button>
+                            <button Type="reset" class="btn btn-danger mt-4">Reset</button>
+                    </div>    
+                </div>
+            </form>
+            </div>
+        </div>
     </section>
 </div>
 
