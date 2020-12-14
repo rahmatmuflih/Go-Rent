@@ -90,13 +90,14 @@
         <!--== Header Top End ==-->
 
         <!--== Header Bottom Start ==-->
-        <div id="header-bottom">
+        <div id="header-bottom" style='background-color:rgba(103, 119, 239,0.6);'>
             <div class="container">
                 <div class="row">
                     <!--== Logo Start ==-->
                     <div class="col-lg-4">
                         <a href="index2.html" class="logo">
-                            <img src="./assets/shop/img/logo.png" alt="JSOFT">
+                            GO! Rent
+                            <!--<img src="./assets/shop/img/logo.png" alt="JSOFT">-->
                         </a>
                     </div>
                     <!--== Logo End ==-->
@@ -135,7 +136,7 @@
                     <div class="slideshowcontent">
                         <div class="display-table">
                             <div class="display-table-cell">
-                                <h1>BOOK A CAR TODAY!</h1>
+                                <h1 style='color:#6777ef;'>BOOK A CAR TODAY!</h1>
                                 <p>FOR AS LOW AS $10 A DAY PLUS 15% DISCOUNT <br> FOR OUR RETURNING CUSTOMERS</p>
 
                                 <div class="book-ur-car">

@@ -215,6 +215,7 @@ header.fixTotop #header-bottom {
 
 .logo {
 	display: inline-block;
+	font-size: 20pt;
 }
 
 .mainmenu ul li {
