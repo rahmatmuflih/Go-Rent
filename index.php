@@ -8,7 +8,7 @@
     <!--=== Favicon ===-->
     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
 
-    <title>Cardoor - Car Rental HTML Template</title>
+    <title>Go! Rent - Car Rental HTML Template</title>
 
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
     <!--=== Bootstrap CSS ===-->
@@ -142,7 +142,7 @@
                                 <div class="book-ur-car">
                                     <form action="index2.html">
                                         <div class="pick-location bookinput-item">
-                                            <select class="custom-select">
+                                            <select class="custom-select" style='background-image:url(./assets/shop/img/caret-cion-blue.png);'>
                                               <option selected>Pick Location</option>
                                               <option value="1">Dhaka</option>
                                               <option value="2">Comilla</option>
@@ -160,7 +160,7 @@
                                         </div>
 
                                         <div class="car-choose bookinput-item">
-                                            <select class="custom-select">
+                                            <select class="custom-select" style='background-image:url(./assets/shop/img/caret-cion-blue.png);'>
                                               <option selected>Choose Car</option>
                                               <option value="1">BMW</option>
                                               <option value="2">Audi</option>
@@ -168,7 +168,7 @@
                                             </select>
                                         </div>
 
-                                        <div class="bookcar-btn bookinput-item">
+                                        <div class="bookcar-btn bookinput-item" >
                                             <button type="submit">Book Car</button>
                                         </div>
                                     </form>

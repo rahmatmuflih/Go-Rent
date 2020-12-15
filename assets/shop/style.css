@@ -173,7 +173,7 @@
 }
 
 #header-top i {
-	color: #ffd000;
+	color: #6777ef;
 	font-size: 15px;
 	margin-right: 2px;
 }
@@ -189,7 +189,7 @@
 #header-area .header-social-icons a:hover i.fa,
 #header-area .mainmenu ul li.active a,
 #header-area .mainmenu ul li:hover a {
-	color: #ffd000;
+	color: #6777ef;
 }
 
 header.fixTotop #header-top {
@@ -215,7 +215,7 @@ header.fixTotop #header-bottom {
 
 .logo {
 	display: inline-block;
-	font-size: 20pt;
+	font-size:20pt;
 }
 
 .mainmenu ul li {
@@ -378,7 +378,6 @@ a.slicknav_btn {
 }
 
 .book-a-car select.custom-select {
-	background-image: url(img/caret-cion.png);
 	background-position: right 13px center;
 	background-size: 12px auto;
 }
@@ -1645,15 +1644,14 @@ body,
 }
 
 .bookcar-btn:hover {
-	background-color: #ffd000;
-	border-color: #ffd000;
+	background-color: #6777ef;
+	border-color: #6777ef;
 }
-
 
 .book-ur-car .input-group-append i.fa {
 	font-size: 15px !important;
 	line-height: 30px;
-	color: #ffd000;
+	color: #6777ef;
 }
 
 .book-ur-car select option {
@@ -1664,7 +1662,7 @@ body,
 }
 
 .book-ur-car select.custom-select {
-	background-image: url("img/caret-cion.png");
+	background-image: url("img/caret-cion-blue.pnggi");
 	background-position: right 12px center;
 	background-size: 12px auto;
 }
@@ -2689,7 +2687,7 @@ body,
 }
 
 .service-item-content h3 {
-	color: #ffd000;
+	color: #6777ef;
 	font-size: 30px;
 	margin-bottom: 20px;
 	text-transform: uppercase;
