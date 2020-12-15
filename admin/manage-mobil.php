@@ -102,7 +102,7 @@ $msg="Data Berhasil dihapus";
         </thead>
         <tbody>
             <?php 
-                $sql = "SELECT * from  kendaraan";
+                $sql = "SELECT * from  kendaraan join merek on merek.id=kendaraan.Merek_kendaraan";
                 $query = $dbh -> prepare($sql);
                 $query->execute();
                 $results=$query->fetchAll(PDO::FETCH_OBJ);
@@ -119,8 +119,8 @@ $msg="Data Berhasil dihapus";
             ?>	
                 <tr>
                     <td><?php echo htmlentities($cnt);?></td>
-					<td><?php echo htmlentities($result->Nama_Kendaraan);?></td>
-					<td><?php echo htmlentities($result->Merek_Kendaraan);?></td>
+					<td><?php echo htmlentities($result->Nama_kendaraan);?></td>
+					<td><?php echo htmlentities($result->NamaMerek);?></td>
 					<td><?php echo htmlentities($result->transmisi);?></td>
 					<td><?php echo htmlentities($result->Bahanbakar);?></td>
 					<td><?php echo htmlentities($result->Tahun_kendaraan);?></td>

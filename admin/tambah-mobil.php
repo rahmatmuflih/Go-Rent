@@ -7,19 +7,19 @@ if(strlen($_SESSION['alogin'])==0){
 }
 else{
     if(isset($_POST['submit'])){
-        $namamobil = $_POST('namamobil');
-        $merekmobil = $_POST('merekmobil');
-        $deskripsi = $_POST('deskripsi');
-        $harga = $_POST('harga');
-        $bahanbakar = $_POST('bahanbakar');
-        $tahun = $_POST('tahun');
-        $transmisi = $_POST('transmisi');
-        $ac = $_POST('ac');
-        $multimedia = $_POST('multimedia');
+        $namamobil = $_POST['namamobil'];
+        $merekmobil = $_POST['merekmobil'];
+        $deskripsi = $_POST['deskripsi'];
+        $harga = $_POST['harga'];
+        $bahanbakar = $_POST['bahanbakar'];
+        $tahun = $_POST['tahun'];
+        $transmisi = $_POST['transmisi'];
+        $ac = $_POST['ac'];
+        $multimedia = $_POST['multimedia'];
         $gambar = $_FILES["gambar"]["name"];
         move_uploaded_file($_FILES["gambar"]["tmp_name"],"img/mobil/".$_FILES["gambar"]["name"]);
 
-        $sql = "INSERT INTO kendaraan(Nama_kendaraan,Merek_kendaraan,Deskripsi,Bahanbakar,Tahun_kendaraan,transmisi,gambar_kendaraan,AirConditioner,Multimedia,Harga_perhari,status) VALUES(:namamobil,:merekmobil,:deskripsi,:bahanbakar,:tahun,:transmisi,:gambar,:ac,:multimedia,:harga)";
+        $sql = "INSERT INTO kendaraan(Nama_kendaraan,Merek_kendaraan,Deskripsi,Bahanbakar,Tahun_kendaraan,transmisi,gambar_kendaraan,AirConditioner,Multimedia,Harga_perhari) VALUES(:namamobil,:merekmobil,:deskripsi,:bahanbakar,:tahun,:transmisi,:gambar,:ac,:multimedia,:harga)";
         $query = $dbh->prepare($sql);
         $query->bindParam(':namamobil',$namamobil,PDO::PARAM_STR);
         $query->bindParam(':merekmobil',$merekmobil,PDO::PARAM_STR);
@@ -109,7 +109,7 @@ else{
             <div class="card-body">
             <?php if($error){?><div class="alert alert-danger alert-dismissible fade show" role="alert">:<?php echo htmlentities($error); ?> </div><?php } 
 				    else if($msg){?><div class="alert alert-success alert-dismissible fade show" role="alert"><?php echo htmlentities($msg); ?> </div><?php }?>
-            <form action="" method="post" onSubmit="return valid();" enctype="multipart/form-data"/>
+            <form action="" method="post" onSubmit="return valid();" enctype="multipart/form-data">
             <div class="row">
                     <div class="col-md-6">
                         <div class="form-group">
@@ -197,4 +197,4 @@ else{
     </section>
 </div>
 <?php include('../inc/footer.php');?>
-<?php  } ; error_reporting(0)?>
+<?php  }?>
