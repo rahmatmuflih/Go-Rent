@@ -142,7 +142,7 @@
                                 <div class="book-ur-car">
                                     <form action="index2.html">
                                         <div class="pick-location bookinput-item">
-                                            <select class="custom-select" style='background-image:url(./assets/shop/img/caret-cion-blue.png);'>
+                                            <select class="custom-select">
                                               <option selected>Pick Location</option>
                                               <option value="1">Dhaka</option>
                                               <option value="2">Comilla</option>
@@ -150,9 +150,9 @@
                                               <option value="3">Rangpur</option>
                                             </select>
                                         </div>
-
+                                        <!--DATE SKIP DULU UNTUK JS-nya-->
                                         <div class="pick-date bookinput-item">
-                                            <input id="startDate2" placeholder="Pick Date" />
+                                            <input id="startDate2" placeholder="Pick Date"/>
                                         </div>
 
                                         <div class="retern-date bookinput-item">
@@ -160,7 +160,7 @@
                                         </div>
 
                                         <div class="car-choose bookinput-item">
-                                            <select class="custom-select" style='background-image:url(./assets/shop/img/caret-cion-blue.png);'>
+                                            <select class="custom-select">
                                               <option selected>Choose Car</option>
                                               <option value="1">BMW</option>
                                               <option value="2">Audi</option>
@@ -712,7 +712,7 @@
                 <!-- Section Title Start -->
                 <div class="col-lg-12">
                     <div class="section-title  text-center">
-                        <h2>Our Creative Persons</h2>
+                        <h2>Kelompok 6</h2>
                         <span class="title-line"><i class="fa fa-car"></i></span>
                         <p>Lorem ipsum dolor sit amet elit.</p>
                     </div>
@@ -733,7 +733,15 @@
                                                 <div class="team-mem-icon">
                                                     <img src="./assets/shop/img/team/team-mem-thumb-1.png" alt="JSOFT">
                                                 </div>
-                                                <h5>Raju Ahammad</h5>
+                                                <h5>Rahmat Muflih Arifin</h5>
+                                            </a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a class="nav-link" id="tab_item_1" data-toggle="tab" href="#team_member_1" role="tab" aria-selected="true">
+                                                <div class="team-mem-icon">
+                                                    <img src="./assets/shop/img/team/team-mem-thumb-1.png" alt="JSOFT">
+                                                </div>
+                                                <h5>Dhani Setiaji</h5>
                                             </a>
                                         </li>
                                         <li class="nav-item">
@@ -741,7 +749,7 @@
                                                 <div class="team-mem-icon">
                                                     <img src="./assets/shop/img/team/team-mem-thumb-3.png" alt="JSOFT">
                                                 </div>
-                                                <h5>Vongchong Smith</h5>
+                                                <h5>Muhammad Yahya Ubaid</h5>
                                             </a>
                                         </li>
                                         <li class="nav-item">
@@ -749,7 +757,7 @@
                                                 <div class="team-mem-icon">
                                                     <img src="./assets/shop/img/team/team-mem-thumb-2.png" alt="JSOFT">
                                                 </div>
-                                                <h5>Alex Tuntuni</h5>
+                                                <h5>Tia Anggi Pratiwi</h5>
                                             </a>
                                         </li>
                                         <li class="nav-item">
@@ -757,7 +765,7 @@
                                                 <div class="team-mem-icon">
                                                     <img src="./assets/shop/img/team/team-mem-thumb-4.png" alt="JSOFT">
                                                 </div>
-                                                <h5>Any Anderssen</h5>
+                                                <h5>Surdihatera</h5>
                                             </a>
                                         </li>
                                     </ul>
@@ -887,7 +895,7 @@
     <!--== Team Area End ==-->
 
     <!--== Mobile App Area Start ==-->
-    <div id="mobileapp-video-bg"></div>
+    <!--<div id="mobileapp-video-bg"></div>
     <section id="mobile-app-area">
         <div class="container">
             <div class="row">
@@ -903,11 +911,11 @@
                 </div>
             </div>
         </div>
-    </section>
+    </section>-->
     <!--== Mobile App Area End ==-->
 
     <!--== Articles Area Start ==-->
-    <section id="tips-article-area" class="section-padding">
+    <section id="tips-article-area" class="section-padding" style='margin-top:-150px;'>
         <div class="container">
             <div class="row">
                 <!-- Section Title Start -->
@@ -1062,7 +1070,8 @@
                         <div class="single-footer-widget">
                             <h2>About Us</h2>
                             <div class="widget-body">
-                                <img src="./assets/shop/img/logo.png" alt="JSOFT">
+                                <!--<img src="./assets/shop/img/logo.png" alt="JSOFT">-->
+                                <p style='font-size:40px;margin-top:-15px;'>GO! Rent</p>
                                 <p>Lorem ipsum dolored is a sit ameted consectetur adipisicing elit. Nobis magni assumenda distinctio debitis, eum fuga fugiat error reiciendis.</p>
 
                                 <div class="newsletter-area">
@@ -1154,7 +1163,7 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> Go-Re
 
     <!--== Scroll Top Area Start ==-->
     <div class="scroll-top">
-        <img src="./assets/shop/img/scroll-top.png" alt="JSOFT">
+        <img src="./assets/shop/img/scroll-top-blue.png" alt="JSOFT">
     </div>
     <!--== Scroll Top Area End ==-->
 

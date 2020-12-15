@@ -111,12 +111,12 @@ ul li {
 
 ::-moz-selection {
     background-color: #fff;
-    color: #fab702;
+    color: #1e33ef;
 }
 
 ::selection {
     background-color: #fff;
-    color: #fab702;
+    color: #1e33ef;
 }
 
 /**
