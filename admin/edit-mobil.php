@@ -18,7 +18,7 @@ else{
         $multimedia = $_POST['multimedia'];
         $id=intval($_GET['id']);
 
-        $sql = "update kendaraan set Nama_kendaraan=:namamobil,Merek_kendaraan=:merekmobil,Deskripsi=:deskripsi,Bahanbakar=:deskripsi,Tahun_kendaraan=:tahun,transmisi=:transmisi,AirConditioner=:ac,Multimedia=:multimedia,Harga_perhari=:harga where id=:id";
+        $sql = "update kendaraan set Nama_kendaraan=:namamobil,Merek_kendaraan=:merekmobil,Deskripsi=:deskripsi,Bahanbakar=:bahanbakar,Tahun_kendaraan=:tahun,transmisi=:transmisi,AirConditioner=:ac,Multimedia=:multimedia,Harga_perhari=:harga where id=:id";
         $query = $dbh->prepare($sql);
         $query->bindParam(':namamobil',$namamobil,PDO::PARAM_STR);
         $query->bindParam(':merekmobil',$merekmobil,PDO::PARAM_STR);
@@ -40,7 +40,7 @@ else{
 <head>
   <meta charset="UTF-8">
   <meta content="width=device-width, initial-scale=1, maximum-scale=1, shrink-to-fit=no" name="viewport">
-  <title>Tambah Mobil</title>
+  <title>Update Mobil</title>
 
   <!-- General CSS Files -->
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
