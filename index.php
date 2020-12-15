@@ -8,7 +8,7 @@
     <!--=== Favicon ===-->
     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
 
-    <title>Go! Rent - Car Rental HTML Template</title>
+    <title>Go! Rent - Car Rental</title>
 
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
     <!--=== Bootstrap CSS ===-->
@@ -53,44 +53,10 @@
     <!--== Header Area Start ==-->
     <header id="header-area" class="fixed-top">
         <!--== Header Top Start ==-->
-        <div id="header-top" class="d-none d-xl-block">
-            <div class="container">
-                <div class="row">
-                    <!--== Single HeaderTop Start ==-->
-                    <div class="col-lg-3 text-left">
-                        <i class="fa fa-map-marker"></i> 802/2, Mirpur, Dhaka
-                    </div>
-                    <!--== Single HeaderTop End ==-->
-
-                    <!--== Single HeaderTop Start ==-->
-                    <div class="col-lg-3 text-center">
-                        <i class="fa fa-mobile"></i> +1 800 345 678
-                    </div>
-                    <!--== Single HeaderTop End ==-->
-
-                    <!--== Single HeaderTop Start ==-->
-                    <div class="col-lg-3 text-center">
-                        <i class="fa fa-clock-o"></i> Mon-Fri 09.00 - 17.00
-                    </div>
-                    <!--== Single HeaderTop End ==-->
-
-                    <!--== Social Icons Start ==-->
-                    <div class="col-lg-3 text-right">
-                        <div class="header-social-icons">
-                            <a href="#"><i class="fa fa-behance"></i></a>
-                            <a href="#"><i class="fa fa-pinterest"></i></a>
-                            <a href="#"><i class="fa fa-facebook"></i></a>
-                            <a href="#"><i class="fa fa-linkedin"></i></a>
-                        </div>
-                    </div>
-                    <!--== Social Icons End ==-->
-                </div>
-            </div>
-        </div>
         <!--== Header Top End ==-->
 
         <!--== Header Bottom Start ==-->
-        <div id="header-bottom" style='background-color:rgba(103, 119, 239,0.6);'>
+        <div id="header-bottom" style='background-color:rgba(103, 119, 239,0.8);'>
             <div class="container">
                 <div class="row">
                     <!--== Logo Start ==-->
@@ -106,10 +72,10 @@
                     <div class="col-lg-8 d-none d-xl-block">
                         <nav class="mainmenu alignright">
                             <ul>
-                                <li><a href="">Home</a></li>
+                                <li><a href="">Beranda</a></li>
                                 <li><a href="">Mobil</a></li>
-                                <li><a href="">Register</a></li>
-                                <li><a href="#">Hai, </a>
+                                <li><a href="">Daftar</a></li>
+                                <li><a href="">Hai, </a>
                                     <ul>
                                         <li><a href="">Transaksi</a></li>
                                         <li><a href="">Ganti Password</a></li>
@@ -117,7 +83,7 @@
                                     </ul>
                                 </li>                                
                                 
-                                  <li><a href="">Login</a></li>
+                                  <li><a href="">Masuk</a></li>
                             </ul>
                         </nav>
                     </div>
@@ -136,32 +102,32 @@
                     <div class="slideshowcontent">
                         <div class="display-table">
                             <div class="display-table-cell">
-                                <h1 style='color:#6777ef;'>BOOK A CAR TODAY!</h1>
-                                <p>FOR AS LOW AS $10 A DAY PLUS 15% DISCOUNT <br> FOR OUR RETURNING CUSTOMERS</p>
+                                <h1 style='color:#6777ef;'>SEWA MOBIL HARI INI!</h1>
+                                <p>DENGAN HARGA MURAH Rp.250.000 PER HARI PLUS 15% POTONGAN HARGA <br> UNTUK PEMESANAN HARI INI</p>
 
                                 <div class="book-ur-car">
                                     <form action="index2.html">
                                         <div class="pick-location bookinput-item">
-                                            <select class="custom-select" style='background-image:url(./assets/shop/img/caret-cion-blue.png);'>
-                                              <option selected>Pick Location</option>
-                                              <option value="1">Dhaka</option>
-                                              <option value="2">Comilla</option>
-                                              <option value="3">Barishal</option>
-                                              <option value="3">Rangpur</option>
+                                            <select class="custom-select">
+                                              <option selected>Lokasi Ambil</option>
+                                              <option value="1">Jakarta</option>
+                                              <option value="2">Yogyakarta</option>
+                                              <option value="3">Bandung</option>
+                                              <option value="3">Surabaya</option>
                                             </select>
                                         </div>
-
+                                        <!--DATE SKIP DULU UNTUK JS-nya-->
                                         <div class="pick-date bookinput-item">
-                                            <input id="startDate2" placeholder="Pick Date" />
+                                            <input id="startDate2" placeholder="Tanggal Ambil"/>
                                         </div>
 
                                         <div class="retern-date bookinput-item">
-                                            <input id="endDate2" placeholder="Return Date" />
+                                            <input id="endDate2" placeholder="Tanggal selesai" />
                                         </div>
 
                                         <div class="car-choose bookinput-item">
-                                            <select class="custom-select" style='background-image:url(./assets/shop/img/caret-cion-blue.png);'>
-                                              <option selected>Choose Car</option>
+                                            <select class="custom-select">
+                                              <option selected>Pilih Mobil</option>
                                               <option value="1">BMW</option>
                                               <option value="2">Audi</option>
                                               <option value="3">Lexus</option>
@@ -169,7 +135,7 @@
                                         </div>
 
                                         <div class="bookcar-btn bookinput-item" >
-                                            <button type="submit">Book Car</button>
+                                            <button type="submit">Sewa Mobil</button>
                                         </div>
                                     </form>
                                 </div>
@@ -189,7 +155,7 @@
                 <!-- Section Title Start -->
                 <div class="col-lg-12">
                     <div class="section-title  text-center">
-                        <h2>About us</h2>
+                        <h2>Tentang Kami</h2>
                         <span class="title-line"><i class="fa fa-car"></i></span>
                         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
                     </div>
@@ -226,7 +192,7 @@
                     <div class="col-lg-4">
                         <div class="about-feature-item active">
                             <i class="fa fa-car"></i>
-                            <h3>ALL BRANDS</h3>
+                            <h3>SEMUA MERK</h3>
                             <p>Loremed ipsumed is a compnayes odsoyel dolor sit amet, consectetur adipisicing elit. Nesciunted all of.</p>
                         </div>
                     </div>
@@ -236,7 +202,7 @@
                     <div class="col-lg-4">
                         <div class="about-feature-item">
                             <i class="fa fa-car"></i>
-                            <h3>ALL BRANDS</h3>
+                            <h3>SEMUA MERK</h3>
                             <p>Loremed ipsumed is a compnayes odsoyel dolor sit amet, consectetur adipisicing elit. Nesciunted all of.</p>
                         </div>
                     </div>
@@ -246,7 +212,7 @@
                     <div class="col-lg-4">
                         <div class="about-feature-item">
                             <i class="fa fa-car"></i>
-                            <h3>ALL BRANDS</h3>
+                            <h3>SEMUA MERK</h3>
                             <p>Loremed ipsumed is a compnayes odsoyel dolor sit amet, consectetur adipisicing elit. Nesciunted all of.</p>
                         </div>
                     </div>
@@ -347,7 +313,7 @@
                 <!-- Section Title Start -->
                 <div class="col-lg-12">
                     <div class="section-title  text-center">
-                        <h2>Our Services</h2>
+                        <h2>Pelayanan Kami</h2>
                         <span class="title-line"><i class="fa fa-car"></i></span>
                         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
                     </div>
@@ -362,7 +328,7 @@
 						<!-- Single Service Start -->
 						<div class="service-item">
 							<i class="fa fa-taxi"></i>
-							<h3>RENTAL CAR</h3>
+							<h3>SEWA MOBIL</h3>
 							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit admollitia.</p>
 						</div>
 						<!-- Single Service End -->
@@ -370,7 +336,7 @@
 						<!-- Single Service Start -->
 						<div class="service-item">
 							<i class="fa fa-cog"></i>
-							<h3>CAR REPAIR</h3>
+							<h3>PERBAIKI MOBIL</h3>
 							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit admollitia.</p>
 						</div>
 						<!-- Single Service End -->
@@ -378,7 +344,7 @@
 						<!-- Single Service Start -->
 						<div class="service-item">
 							<i class="fa fa-map-marker"></i>
-							<h3>TAXI SERVICE</h3>
+							<h3>ANTAR JEMPUT</h3>
 							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit admollitia.</p>
 						</div>
 						<!-- Single Service End -->
@@ -386,7 +352,7 @@
 						<!-- Single Service Start -->
 						<div class="service-item">
 							<i class="fa fa-life-ring"></i>
-							<h3>life insurance</h3>
+							<h3>ASURANSI JIWA</h3>
 							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit admollitia.</p>
 						</div>
 						<!-- Single Service End -->
@@ -394,7 +360,7 @@
 						<!-- Single Service Start -->
 						<div class="service-item">
 							<i class="fa fa-bath"></i>
-							<h3>car wash</h3>
+							<h3>CUCI MOBIL</h3>
 							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit admollitia.</p>
 						</div>
 						<!-- Single Service End -->
@@ -402,7 +368,7 @@
 						<!-- Single Service Start -->
 						<div class="service-item">
 							<i class="fa fa-phone"></i>
-							<h3>call driver</h3>
+							<h3>PANGGIL DRIVER</h3>
 							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit admollitia.</p>
 						</div>
 						<!-- Single Service End -->
@@ -429,7 +395,7 @@
                                     </div>
                                     <div class="funfact-content">
                                         <p><span class="counter">550</span>+</p>
-                                        <h4>HAPPY CLIENTS</h4>
+                                        <h4>Kostumer Senang</h4>
                                     </div>
                                 </div>
                             </div>
@@ -443,7 +409,7 @@
                                     </div>
                                     <div class="funfact-content">
                                         <p><span class="counter">250</span>+</p>
-                                        <h4>CARS IN STOCK</h4>
+                                        <h4>Mobil yang tersedia</h4>
                                     </div>
                                 </div>
                             </div>
@@ -457,7 +423,7 @@
                                     </div>
                                     <div class="funfact-content">
                                         <p><span class="counter">50</span>+</p>
-                                        <h4>office in cities</h4>
+                                        <h4>kantor di berbagai kota</h4>
                                     </div>
                                 </div>
                             </div>
@@ -477,7 +443,7 @@
                 <!-- Section Title Start -->
                 <div class="col-lg-12">
                     <div class="section-title  text-center">
-                        <h2>Choose your Car</h2>
+                        <h2>Pilih Mobilmu</h2>
                         <span class="title-line"><i class="fa fa-car"></i></span>
                         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
                     </div>
@@ -493,9 +459,9 @@
                             <div class="col-lg-3">
                                 <!-- Choose Filtering Menu Start -->
                                 <div class="home2-car-filter">
-                                    <a href="#" data-filter="*" class="active">all</a>
+                                    <a href="#" data-filter="*" class="active">Semua</a>
                                     <a href="#" data-filter=".con">Conver</a>
-                                    <a href="#" data-filter=".hat">Truck</a>
+                                    <a href="#" data-filter=".hat">Truk</a>
                                     <a href="#" data-filter=".mpv">MPV</a>
                                     <a href="#" data-filter=".sedan">Sedan</a>
                                     <a href="#" data-filter=".suv">SUV</a>
@@ -633,7 +599,7 @@
                 <!-- Section Title Start -->
                 <div class="col-lg-12">
                     <div class="section-title  text-center">
-                        <h2>Only quality for clients</h2>
+                        <h2>Kualitas Terbaik Untuk Client</h2>
                         <span class="title-line"><i class="fa fa-car"></i></span>
                         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
                     </div>
@@ -646,17 +612,17 @@
                 <!-- Single Pricing Table -->
                 <div class="col-lg-4 col-md-6 text-center">
                     <div class="single-pricing-table">
-                        <h3>BUSINESS</h3>
-                        <h2>$ 55.99</h2>
-                        <h5>PER MONTH</h5>
+                        <h3>Bisnis</h3>
+                        <h2>Rp 800.000</h2>
+                        <h5>PER BULAN</h5>
 
                         <ul class="package-list">
-                            <li>FREE VEHICLE DELIVERY</li>
-                            <li>WEDDINGS CELEBRATIONS</li>
-                            <li>FULL INSURANCE INCLUDED</li>
-                            <li>TRANSPORT ABROAD</li>
-                            <li>ALL INCLUSIVE MINI BAR</li>
-                            <li>CHAUFFER INCLUDED IN PRICE</li>
+                            <li>PENGANTARAN KENDARAAN GRATIS</li>
+                            <li>PERAYAAN PERNIKAHAN</li>
+                            <li>ASURANSI FULL SUDAH TERMASUK</li>
+                            <li>TRANSPORT KE LUAR NEGERI</li>
+                            <li>SEMUA MINI BAR INCLUSIVE</li>
+                            <li>CHAUFFER TERMASUK DALAM HARGA</li>
                         </ul>
                     </div>
                 </div>
@@ -666,16 +632,16 @@
                 <div class="col-lg-4 col-md-6 text-center">
                     <div class="single-pricing-table">
                         <h3>Trial</h3>
-                        <h2>Free</h2>
-                        <h5>PER MONTH</h5>
+                        <h2>GRATIS</h2>
+                        <h5>PER BULAN</h5>
 
                         <ul class="package-list">
-                            <li>FREE VEHICLE DELIVERY</li>
-                            <li>OTHER CELEBRATIONS</li>
-                            <li>FULL INSURANCE</li>
-                            <li>TRANSPORT ABROAD</li>
+                            <li>PENGANTARAN KENDARAAN GRARIS</li>
+                            <li>PERAYAAN LAIN</li>
+                            <li>ASURANSI FULL</li>
+                            <li>TRANSPORT KE LUAR NEGERI</li>
                             <li>MINI BAR</li>
-                            <li>INCLUDED IN PRICE</li>
+                            <li>TERMASUK DALAM HARGA</li>
                         </ul>
                     </div>
                 </div>
@@ -684,17 +650,17 @@
                 <!-- Single Pricing Table -->
                 <div class="col-lg-4 col-md-6 text-center">
                     <div class="single-pricing-table">
-                        <h3>standard</h3>
-                        <h2>$ 35.99</h2>
-                        <h5>PER MONTH</h5>
+                        <h3>Standar</h3>
+                        <h2>RP 510.000</h2>
+                        <h5>PER BULAN</h5>
 
                         <ul class="package-list">
-                            <li>DELIVERY AT AIRPORT</li>
-                            <li>WEDDINGS AND OTHER</li>
-                            <li>FULL INCLUDED</li>
-                            <li>TRANSPORT ABROAD</li>
-                            <li>ALL MINI BAR</li>
-                            <li>CHAUFFER PRICE</li>
+                            <li>PENGANTARAN DI BANDARA</li>
+                            <li>PERNIKAHAN DAN LAINNYA</li>
+                            <li>SEMUA TERMASUK</li>
+                            <li>TRANSPORT KE LUAR NEGERI</li>
+                            <li>SEMUA MINI BAR</li>
+                            <li>CHAUFFER TERMASUK DALAM HARGA</li>
                         </ul>
                     </div>
                 </div>
@@ -712,7 +678,7 @@
                 <!-- Section Title Start -->
                 <div class="col-lg-12">
                     <div class="section-title  text-center">
-                        <h2>Our Creative Persons</h2>
+                        <h2>Dibuat Oleh: Kelompok 6</h2>
                         <span class="title-line"><i class="fa fa-car"></i></span>
                         <p>Lorem ipsum dolor sit amet elit.</p>
                     </div>
@@ -731,33 +697,41 @@
                                         <li class="nav-item">
                                             <a class="nav-link active" id="tab_item_1" data-toggle="tab" href="#team_member_1" role="tab" aria-selected="true">
                                                 <div class="team-mem-icon">
-                                                    <img src="./assets/shop/img/team/team-mem-thumb-1.png" alt="JSOFT">
+                                                    <img src="./assets/shop/img/team/team-mem-thumb-0.png" alt="JSOFT">
                                                 </div>
-                                                <h5>Raju Ahammad</h5>
+                                                <h5>Rahmat Muflih Arifin</h5>
                                             </a>
                                         </li>
                                         <li class="nav-item">
                                             <a class="nav-link" id="tab_item_2" data-toggle="tab" href="#team_member_2" role="tab" aria-selected="true">
                                                 <div class="team-mem-icon">
-                                                    <img src="./assets/shop/img/team/team-mem-thumb-3.png" alt="JSOFT">
+                                                    <img src="./assets/shop/img/team/team-mem-thumb-1.png" alt="JSOFT">
                                                 </div>
-                                                <h5>Vongchong Smith</h5>
+                                                <h5>Dhani Setiaji</h5>
                                             </a>
                                         </li>
                                         <li class="nav-item">
                                             <a class="nav-link" id="tab_item_3" data-toggle="tab" href="#team_member_3" role="tab" aria-selected="true">
                                                 <div class="team-mem-icon">
-                                                    <img src="./assets/shop/img/team/team-mem-thumb-2.png" alt="JSOFT">
+                                                    <img src="./assets/shop/img/team/team-mem-thumb-3.png" alt="JSOFT">
                                                 </div>
-                                                <h5>Alex Tuntuni</h5>
+                                                <h5>Muhammad Yahya Ubaid</h5>
                                             </a>
                                         </li>
                                         <li class="nav-item">
                                             <a class="nav-link" id="tab_item_4" data-toggle="tab" href="#team_member_4" role="tab" aria-selected="true">
                                                 <div class="team-mem-icon">
+                                                    <img src="./assets/shop/img/team/team-mem-thumb-2.png" alt="JSOFT">
+                                                </div>
+                                                <h5>Tia Anggi Pratiwi</h5>
+                                            </a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a class="nav-link" id="tab_item_5" data-toggle="tab" href="#team_member_5" role="tab" aria-selected="true">
+                                                <div class="team-mem-icon">
                                                     <img src="./assets/shop/img/team/team-mem-thumb-4.png" alt="JSOFT">
                                                 </div>
-                                                <h5>Any Anderssen</h5>
+                                                <h5>Surdihatera</h5>
                                             </a>
                                         </li>
                                     </ul>
@@ -773,12 +747,12 @@
                                         <div class="row">
                                             <div class="col-lg-6 col-md-6">
                                                 <div class="team-member-pro-pic">
-                                                    <img src="./assets/shop/img/team/team-mem-1.png" alt="JSOFT">
+                                                    <img src="./assets/shop/img/team/team-mem-0.png" alt="JSOFT">
                                                 </div>
                                             </div>
                                             <div class="col-lg-6 col-md-6">
                                                 <div class="team-member-info text-center">
-                                                    <h4>Raju Ahammad</h4>
+                                                    <h4>Rahmat Muflih Arifin</h4>
                                                     <h5>Developer</h5>
                                                     <span class="quote-icon"><i class="fa fa-quote-left"></i></span>
                                                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut sollicitudin fermentum dolor. Nunc nec augue urna. Cras varius orci vitae lacinia efficitur.</p>
@@ -796,17 +770,17 @@
                                     <!-- Single Team  End -->
 
                                     <!-- Single Team  start -->
-                                    <div class="tab-pane fade" id="team_member_2" role="tabpanel" aria-labelledby="tab_item_2">
+                                    <div class="tab-pane fade show" id="team_member_2" role="tabpanel" aria-labelledby="tab_item_2">
                                         <div class="row">
                                             <div class="col-lg-6 col-md-6">
                                                 <div class="team-member-pro-pic">
-                                                    <img src="./assets/shop/img/team/team-mem-3.png" alt="JSOFT">
+                                                    <img src="./assets/shop/img/team/team-mem-1.png" alt="JSOFT">
                                                 </div>
                                             </div>
                                             <div class="col-lg-6 col-md-6">
                                                 <div class="team-member-info text-center">
-                                                    <h4>Vongchong Smith</h4>
-                                                    <h5>Designer</h5>
+                                                    <h4>Dhani Setiaji</h4>
+                                                    <h5>Developer</h5>
                                                     <span class="quote-icon"><i class="fa fa-quote-left"></i></span>
                                                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut sollicitudin fermentum dolor. Nunc nec augue urna. Cras varius orci vitae lacinia efficitur.</p>
                                                     <div class="team-social-icon">
@@ -827,13 +801,13 @@
                                         <div class="row">
                                             <div class="col-lg-6 col-md-6">
                                                 <div class="team-member-pro-pic">
-                                                    <img src="./assets/shop/img/team/team-mem-2.png" alt="JSOFT">
+                                                    <img src="./assets/shop/img/team/team-mem-3.png" alt="JSOFT">
                                                 </div>
                                             </div>
                                             <div class="col-lg-6 col-md-6">
                                                 <div class="team-member-info text-center">
-                                                    <h4>Alex Tuntuni</h4>
-                                                    <h5>Marketer</h5>
+                                                    <h4>Muhammad Yahya Ubaid</h4>
+                                                    <h5>Designer</h5>
                                                     <span class="quote-icon"><i class="fa fa-quote-left"></i></span>
                                                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut sollicitudin fermentum dolor. Nunc nec augue urna. Cras varius orci vitae lacinia efficitur.</p>
                                                     <div class="team-social-icon">
@@ -854,12 +828,39 @@
                                         <div class="row">
                                             <div class="col-lg-6 col-md-6">
                                                 <div class="team-member-pro-pic">
+                                                    <img src="./assets/shop/img/team/team-mem-2.png" alt="JSOFT">
+                                                </div>
+                                            </div>
+                                            <div class="col-lg-6 col-md-6">
+                                                <div class="team-member-info text-center">
+                                                    <h4>Tia Anggi Pratiwi</h4>
+                                                    <h5>Marketer</h5>
+                                                    <span class="quote-icon"><i class="fa fa-quote-left"></i></span>
+                                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut sollicitudin fermentum dolor. Nunc nec augue urna. Cras varius orci vitae lacinia efficitur.</p>
+                                                    <div class="team-social-icon">
+                                                        <a href="#"><i class="fa fa-facebook"></i></a>
+                                                        <a href="#"><i class="fa fa-twitter"></i></a>
+                                                        <a href="#"><i class="fa fa-linkedin"></i></a>
+                                                        <a href="#"><i class="fa fa-pinterest"></i></a>
+                                                        <a href="#"><i class="fa fa-dribbble"></i></a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- Single Team  End -->
+
+                                    <!-- Single Team  start -->
+                                    <div class="tab-pane fade" id="team_member_5" role="tabpanel" aria-labelledby="tab_item_5">
+                                        <div class="row">
+                                            <div class="col-lg-6 col-md-6">
+                                                <div class="team-member-pro-pic">
                                                     <img src="./assets/shop/img/team/team-mem-4.png" alt="JSOFT">
                                                 </div>
                                             </div>
                                             <div class="col-lg-6 col-md-6">
                                                 <div class="team-member-info text-center">
-                                                    <h4>Any Anderssen</h4>
+                                                    <h4>Surdihatera</h4>
                                                     <h5>Manager</h5>
                                                     <span class="quote-icon"><i class="fa fa-quote-left"></i></span>
                                                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut sollicitudin fermentum dolor. Nunc nec augue urna. Cras varius orci vitae lacinia efficitur.</p>
@@ -886,34 +887,14 @@
     </section>
     <!--== Team Area End ==-->
 
-    <!--== Mobile App Area Start ==-->
-    <div id="mobileapp-video-bg"></div>
-    <section id="mobile-app-area">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-6">
-                    <div class="mobile-app-content">
-                        <h2>SAVE 30% WITH THE APP</h2>
-                        <p>Easy &amp; Fast - Book a car in 60 seconds</p>
-                        <div class="app-btns">
-                            <a href="#"><i class="fa fa-android"></i> Android Store</a>
-                            <a href="#"><i class="fa fa-apple"></i> Apple Store</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    <!--== Mobile App Area End ==-->
-
     <!--== Articles Area Start ==-->
-    <section id="tips-article-area" class="section-padding">
+    <section id="tips-article-area" class="section-padding" style='margin-top:-150px;'>
         <div class="container">
             <div class="row">
                 <!-- Section Title Start -->
                 <div class="col-lg-12">
                     <div class="section-title  text-center">
-                        <h2>Tips and articles</h2>
+                        <h2>Tips dan Artikel</h2>
                         <span class="title-line"><i class="fa fa-car"></i></span>
                         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
                     </div>
@@ -942,7 +923,7 @@
                                         <div class="article-body">
                                             <h3><a href="article-details.html">Wliquam sit amet urna eullam</a></h3>
                                             <div class="article-meta">
-                                                <a href="#" class="author">By :: <span>Admin</span></a>
+                                                <a href="#" class="author">Oleh :: <span>Admin</span></a>
                                                 <a href="#" class="commnet">Comments :: <span>10</span></a>
                                             </div>
 
@@ -981,7 +962,7 @@
                                         <div class="article-body">
                                             <h3><a href="article-details.html">fringilla oremedad ipsum dolor sit</a></h3>
                                             <div class="article-meta">
-                                                <a href="#" class="author">By :: <span>Admin</span></a>
+                                                <a href="#" class="author">Oleh :: <span>Admin</span></a>
                                                 <a href="#" class="commnet">Comments :: <span>10</span></a>
                                             </div>
 
@@ -1027,7 +1008,7 @@
                                         <div class="article-body">
                                             <h3><a href="article-details.html">Tempored incididunt ut labore</a></h3>
                                             <div class="article-meta">
-                                                <a href="#" class="author">By :: <span>Admin</span></a>
+                                                <a href="#" class="author">Oleh :: <span>Admin</span></a>
                                                 <a href="#" class="commnet">Comments :: <span>10</span></a>
                                             </div>
 
@@ -1060,9 +1041,10 @@
                     <!-- Single Footer Widget Start -->
                     <div class="col-lg-4 col-md-6">
                         <div class="single-footer-widget">
-                            <h2>About Us</h2>
+                            <h2>Tentang Kami</h2>
                             <div class="widget-body">
-                                <img src="./assets/shop/img/logo.png" alt="JSOFT">
+                                <!--<img src="./assets/shop/img/logo.png" alt="JSOFT">-->
+                                <p style='font-size:40px;margin-top:-15px;'>GO! Rent</p>
                                 <p>Lorem ipsum dolored is a sit ameted consectetur adipisicing elit. Nobis magni assumenda distinctio debitis, eum fuga fugiat error reiciendis.</p>
 
                                 <div class="newsletter-area">
@@ -1080,12 +1062,12 @@
                     <!-- Single Footer Widget Start -->
                     <div class="col-lg-4 col-md-6">
                         <div class="single-footer-widget">
-                            <h2>Recent Posts</h2>
+                            <h2>Postingan Sebelumnya</h2>
                             <div class="widget-body">
                                 <ul class="recent-post">
                                     <li>
                                         <a href="#">
-                                           Hello Bangladesh! 
+                                           Hello Indonesia! 
                                            <i class="fa fa-long-arrow-right"></i>
                                        </a>
                                     </li>
@@ -1097,7 +1079,7 @@
                                     </li>
                                     <li>
                                         <a href="#">
-                                           Hello Bangladesh! 
+                                           Hello Indonesia! 
                                            <i class="fa fa-long-arrow-right"></i>
                                        </a>
                                     </li>
@@ -1116,16 +1098,16 @@
                     <!-- Single Footer Widget Start -->
                     <div class="col-lg-4 col-md-6">
                         <div class="single-footer-widget">
-                            <h2>get touch</h2>
+                            <h2>Lebih Dekat</h2>
                             <div class="widget-body">
                                 <p>Lorem ipsum doloer sited amet, consectetur adipisicing elit. nibh auguea, scelerisque sed</p>
 
                                 <ul class="get-touch">
-                                    <li><i class="fa fa-map-marker"></i> 800/8, Kazipara, Dhaka</li>
-                                    <li><i class="fa fa-mobile"></i> +880 01 86 25 72 43</li>
-                                    <li><i class="fa fa-envelope"></i> kazukamdu83@gmail.com</li>
+                                    <li><i class="fa fa-map-marker"></i> Bintaro, Jakarta Selatan</li>
+                                    <li><i class="fa fa-mobile"></i> +62 820 7892 6578</li>
+                                    <li><i class="fa fa-envelope"></i> cs@gorent.com</li>
                                 </ul>
-                                <a href="https://goo.gl/maps/b5mt45MCaPB2" class="map-show" target="_blank">Show Location</a>
+                                <a href="https://goo.gl/maps/b5mt45MCaPB2" class="map-show" target="_blank">Lihat Lokasi</a>
                             </div>
                         </div>
                     </div>
@@ -1141,9 +1123,11 @@
             <div class="container">
                 <div class="row">
                     <div class="col-lg-12 text-center">
-                        <p><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-Copyright &copy;<script>document.write(new Date().getFullYear());</script> Go-Rent
-<!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. --></p>
+                        <p>
+                            <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+                                Copyright &copy;<script>document.write(new Date().getFullYear());</script> Go! Rent
+                            <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+                        </p>
                     </div>
                 </div>
             </div>
@@ -1154,7 +1138,7 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> Go-Re
 
     <!--== Scroll Top Area Start ==-->
     <div class="scroll-top">
-        <img src="./assets/shop/img/scroll-top.png" alt="JSOFT">
+        <img src="./assets/shop/img/scroll-top-blue.png" alt="JSOFT">
     </div>
     <!--== Scroll Top Area End ==-->
 
