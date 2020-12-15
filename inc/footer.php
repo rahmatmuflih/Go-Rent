@@ -1,4 +1,4 @@
-<footer class="main-footer" style='margin-top:600px;'>
+<footer class="main-footer">
         <div class="footer-left">
           Copyright &copy; 20202 <div class="bullet"></div> Made with ❤
         </div>

@@ -10,7 +10,7 @@ else{
 if(isset($_GET['del']))
 {
 $id=$_GET['del'];
-$sql = "delete from users  WHERE id_user=:id";
+$sql = "delete from kendaraan  WHERE id=:id";
 $query = $dbh->prepare($sql);
 $query -> bindParam(':id',$id, PDO::PARAM_STR);
 $query -> execute();
@@ -23,7 +23,7 @@ $msg="Data Berhasil dihapus";
 <head>
   <meta charset="UTF-8">
   <meta content="width=device-width, initial-scale=1, maximum-scale=1, shrink-to-fit=no" name="viewport">
-  <title>Manage Customers</title>
+  <title>Manage Mobil</title>
 
   <!-- General CSS Files -->
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
@@ -81,28 +81,37 @@ $msg="Data Berhasil dihapus";
     <div class="main-content">
     <section class="section">
         <div class="section-header">
-            <h1>Data Customers</h1>
+            <h1>Data Mobil</h1>
         </div>
-        <!-- <a href="tambah-admin.php" class="btn btn-primary mb-3"><i class="fas fa-plus"></i> Tambah admin</a> -->
+        <a href="tambah-mobil.php" class="btn btn-primary mb-3"><i class="fas fa-plus"></i> Tambah merek</a>
         <?php if($error){?><div class="alert alert-danger alert-dismissible fade show" role="alert">:<?php echo htmlentities($error); ?> </div><?php } 
 				else if($msg){?><div class="alert alert-success alert-dismissible fade show" role="alert"><?php echo htmlentities($msg); ?> </div><?php }?>
         <table class="table table-hover table-striped table-border">
         <thead>
             <tr>
                 <th>No </th>
-                <th>Nama</th>
-                <th>Email</th>
-                <th>No Telepon</th>
-                <th>Tanggal Daftar</th>
-                <th>Aksi</th>
+                <th>Nama Mobil</th>
+                <th>Merek Mobil</th>
+                <th>Transmisi</th>
+                <th>Bahan Bakar</th>
+                <th>Tahun</th>
+                <th>Harga/hari</th>
+                <th>Status</th>
+                <th>Aksi </th>
             </tr>
         </thead>
         <tbody>
             <?php 
-                $sql = "SELECT * from  users";
+                $sql = "SELECT * from  kendaraan";
                 $query = $dbh -> prepare($sql);
                 $query->execute();
                 $results=$query->fetchAll(PDO::FETCH_OBJ);
+                function rupiah($angka){
+	
+                    $hasil_rupiah = "Rp " . number_format($angka,2,',','.');
+                    return $hasil_rupiah;
+                 
+                }
 
                 $cnt=1;
                 if($query->rowCount() > 0){
@@ -110,13 +119,16 @@ $msg="Data Berhasil dihapus";
             ?>	
                 <tr>
                     <td><?php echo htmlentities($cnt);?></td>
-					<td><?php echo htmlentities($result->NamaLengkap);?></td>
-					<td><?php echo htmlentities($result->Email);?></td>
-					<td><?php echo htmlentities($result->no_telepon);?></td>
-					<td><?php echo htmlentities($result->RedDate);?></td>
+					<td><?php echo htmlentities($result->Nama_Kendaraan);?></td>
+					<td><?php echo htmlentities($result->Merek_Kendaraan);?></td>
+					<td><?php echo htmlentities($result->transmisi);?></td>
+					<td><?php echo htmlentities($result->Bahanbakar);?></td>
+					<td><?php echo htmlentities($result->Tahun_kendaraan);?></td>
+					<td><?php echo rupiah($result->Harga_perhari);?></td>
+                    <td><?php if($result->status == "1"){?><div class="badge badge-success">Tersedia</div><?php } else { ?><div class="badge badge-danger">Tidak Tersedia</div><?php } ; ?></td>
                     <td>
-                        <!-- <a href="edit-users.php?id=<?php echo $result->id_user;?>" class="btn btn-sm btn-primary"><i class="fas fa-edit"></i></a> -->
-                        <a href="manage-users.php?del=<?php echo $result->id_user;?>" onclick="return confirm('Do you want to delete');" class="btn btn-sm btn-danger"><i class="fas fa-trash"></i></a>
+                        <a href="edit-mobil.php?id=<?php echo $result->id;?>" class="btn btn-sm btn-primary"><i class="fas fa-edit"></i></a>
+                        <a href="manage-mobil.php?del=<?php echo $result->id;?>" onclick="return confirm('Do you want to delete');" class="btn btn-sm btn-danger"><i class="fas fa-trash"></i></a>
                     </td>
                 </tr>
                 <?php $cnt=$cnt+1; }} ?>

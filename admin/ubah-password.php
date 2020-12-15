@@ -113,7 +113,7 @@ else{
             <div class="card-body">
             <form name="chngpwd" method="POST" onSubmit="return valid();">
             <?php if($error){?><div class="alert alert-danger alert-dismissible fade show" role="alert">:<?php echo htmlentities($error); ?> </div><?php } 
-				else if($msg){?><div class="alert alert-success alert-dismissible fade show" role="alert"><?php echo htmlentities($msg); ?> </div><?php }?>
+				    else if($msg){?><div class="alert alert-success alert-dismissible fade show" role="alert"><?php echo htmlentities($msg); ?> </div><?php }?>
             <div class="row">
                     <div class="col-md-6">
                         <div class="form-group">
