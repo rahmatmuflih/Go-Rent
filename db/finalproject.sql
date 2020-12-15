@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Waktu pembuatan: 13 Des 2020 pada 12.31
+-- Waktu pembuatan: 15 Des 2020 pada 10.56
 -- Versi server: 10.4.14-MariaDB
 -- Versi PHP: 7.2.33
 
@@ -30,7 +30,7 @@ SET time_zone = "+00:00";
 CREATE TABLE `admin` (
   `id` int(11) NOT NULL,
   `UserName` varchar(120) NOT NULL,
-  `Password` varchar(120) NOT NULL,
+  `Password` varchar(120) NOT NULL DEFAULT '482c811da5d5b4bc6d497ffa98491e38',
   `updationDate` timestamp NOT NULL DEFAULT current_timestamp() ON UPDATE current_timestamp()
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
@@ -39,7 +39,8 @@ CREATE TABLE `admin` (
 --
 
 INSERT INTO `admin` (`id`, `UserName`, `Password`, `updationDate`) VALUES
-(1, 'admin', '21232f297a57a5a743894a0e4a801fc3', '2020-12-12 12:41:04');
+(1, 'admin', '21232f297a57a5a743894a0e4a801fc3', '2020-12-15 04:22:44'),
+(3, 'admin1', '482c811da5d5b4bc6d497ffa98491e38', '2020-12-15 04:33:34');
 
 -- --------------------------------------------------------
 
@@ -54,13 +55,22 @@ CREATE TABLE `kendaraan` (
   `Deskripsi` text NOT NULL,
   `Bahanbakar` varchar(120) NOT NULL,
   `Tahun_kendaraan` int(6) NOT NULL,
+  `transmisi` varchar(50) NOT NULL,
   `gambar_kendaraan` varchar(120) NOT NULL,
   `AirConditioner` int(11) NOT NULL,
   `Multimedia` int(11) NOT NULL,
   `Harga_perhari` int(11) NOT NULL,
+  `status` int(11) NOT NULL DEFAULT 1,
   `RegDate` timestamp NOT NULL DEFAULT current_timestamp(),
   `UpdationDate` timestamp NULL DEFAULT NULL ON UPDATE current_timestamp()
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data untuk tabel `kendaraan`
+--
+
+INSERT INTO `kendaraan` (`id`, `Nama_kendaraan`, `Merek_kendaraan`, `Deskripsi`, `Bahanbakar`, `Tahun_kendaraan`, `transmisi`, `gambar_kendaraan`, `AirConditioner`, `Multimedia`, `Harga_perhari`, `status`, `RegDate`, `UpdationDate`) VALUES
+(1, 'Agya', 1, 'ini deskripsi', 'ini deskripsi', 2018, 'MANUAL', '5ecf1d864a962.jpg', 1, 1, 120000, 1, '2020-12-15 08:57:42', '2020-12-15 09:56:08');
 
 -- --------------------------------------------------------
 
@@ -74,6 +84,14 @@ CREATE TABLE `merek` (
   `CreationDate` timestamp NOT NULL DEFAULT current_timestamp(),
   `UpdationDate` timestamp NULL DEFAULT NULL ON UPDATE current_timestamp()
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data untuk tabel `merek`
+--
+
+INSERT INTO `merek` (`id`, `NamaMerek`, `CreationDate`, `UpdationDate`) VALUES
+(1, 'Toyota', '2020-12-14 04:13:39', NULL),
+(2, 'Honda', '2020-12-14 04:13:59', '2020-12-14 04:22:13');
 
 -- --------------------------------------------------------
 
@@ -109,13 +127,6 @@ CREATE TABLE `users` (
   `RegDate` timestamp NOT NULL DEFAULT current_timestamp(),
   `UpdationDate` timestamp NULL DEFAULT NULL ON UPDATE current_timestamp()
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
-
---
--- Dumping data untuk tabel `users`
---
-
-INSERT INTO `users` (`id_user`, `NamaLengkap`, `Email`, `Password`, `no_telepon`, `no_ktp`, `alamat`, `RegDate`, `UpdationDate`) VALUES
-(1, 'Surdihatera', 'surdihatera@students.amikom.ac.id', '81dc9bdb52d04dc20036dbd8313ed055', '08122727055', '3336152734635432', 'Jalan Palagan Km 5 Yogyakarta', '2020-12-13 11:05:58', NULL);
 
 --
 -- Indexes for dumped tables
@@ -159,19 +170,19 @@ ALTER TABLE `users`
 -- AUTO_INCREMENT untuk tabel `admin`
 --
 ALTER TABLE `admin`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
 -- AUTO_INCREMENT untuk tabel `kendaraan`
 --
 ALTER TABLE `kendaraan`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
 -- AUTO_INCREMENT untuk tabel `merek`
 --
 ALTER TABLE `merek`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
 -- AUTO_INCREMENT untuk tabel `transaksi`
