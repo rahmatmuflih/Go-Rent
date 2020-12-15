@@ -189,7 +189,7 @@
 #header-area .header-social-icons a:hover i.fa,
 #header-area .mainmenu ul li.active a,
 #header-area .mainmenu ul li:hover a {
-	color: #6777ef;
+	color: #1e33ef;
 }
 
 header.fixTotop #header-top {
@@ -277,7 +277,7 @@ header.fixTotop #header-bottom {
 
 .mainmenu ul li ul li.active a,
 .mainmenu ul li ul li a:hover {
-	background-color: #ffd000;
+	background-color: #6777ef;
 }
 
 #header-bottom .container {
@@ -293,7 +293,7 @@ header.fixTotop #header-bottom {
 }
 
 a.slicknav_btn {
-	background-color: #ffd000;
+	background-color: #6777ef;
 	border-radius: 2px;
 	height: 35px;
 	margin: 0;
@@ -330,7 +330,7 @@ a.slicknav_btn {
 
 .slicknav_nav {
 	background-color: #000;
-	border-top: 1px solid #ffd000;
+	border-top: 1px solid #6777ef;
 	position: absolute;
 	top: 65px;
 	width: 100%;
@@ -347,7 +347,7 @@ a.slicknav_btn {
 
 .slicknav_nav ul li.slicknav_parent a:hover,
 .slicknav_nav ul li a:hover {
-	background-color: #ffd000;
+	background-color:  #6777ef;
 	border-radius: 0px;
 }
 
