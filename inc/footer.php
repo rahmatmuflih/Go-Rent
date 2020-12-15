@@ -1,6 +1,6 @@
 <footer class="main-footer" style='margin-top:600px;'>
         <div class="footer-left">
-          Copyright &copy; 20202 <div class="bullet"></div> Made with ❤
+          Copyright &copy;2020 <div class="bullet"></div> GO! Rent
         </div>
       </footer>
     </div>

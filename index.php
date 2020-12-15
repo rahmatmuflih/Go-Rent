@@ -887,26 +887,6 @@
     </section>
     <!--== Team Area End ==-->
 
-    <!--== Mobile App Area Start ==-->
-    <!--<div id="mobileapp-video-bg"></div>
-    <section id="mobile-app-area">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-6">
-                    <div class="mobile-app-content">
-                        <h2>SAVE 30% WITH THE APP</h2>
-                        <p>Easy &amp; Fast - Book a car in 60 seconds</p>
-                        <div class="app-btns">
-                            <a href="#"><i class="fa fa-android"></i> Android Store</a>
-                            <a href="#"><i class="fa fa-apple"></i> Apple Store</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>-->
-    <!--== Mobile App Area End ==-->
-
     <!--== Articles Area Start ==-->
     <section id="tips-article-area" class="section-padding" style='margin-top:-150px;'>
         <div class="container">
@@ -914,7 +894,7 @@
                 <!-- Section Title Start -->
                 <div class="col-lg-12">
                     <div class="section-title  text-center">
-                        <h2>Tps dan Artikel</h2>
+                        <h2>Tips dan Artikel</h2>
                         <span class="title-line"><i class="fa fa-car"></i></span>
                         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
                     </div>
@@ -1145,7 +1125,7 @@
                     <div class="col-lg-12 text-center">
                         <p>
                             <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-                                Copyright &copy;<script>document.write(new Date().getFullYear());</script> Go-Rent
+                                Copyright &copy;<script>document.write(new Date().getFullYear());</script> Go! Rent
                             <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
                         </p>
                     </div>
