@@ -697,7 +697,7 @@
                                         <li class="nav-item">
                                             <a class="nav-link active" id="tab_item_1" data-toggle="tab" href="#team_member_1" role="tab" aria-selected="true">
                                                 <div class="team-mem-icon">
-                                                    <img src="./assets/shop/img/team/team-mem-thumb-1.png" alt="JSOFT">
+                                                    <img src="./assets/shop/img/team/team-mem-thumb-0.png" alt="JSOFT">
                                                 </div>
                                                 <h5>Rahmat Muflih Arifin</h5>
                                             </a>
@@ -747,7 +747,7 @@
                                         <div class="row">
                                             <div class="col-lg-6 col-md-6">
                                                 <div class="team-member-pro-pic">
-                                                    <img src="./assets/shop/img/team/team-mem-1.png" alt="JSOFT">
+                                                    <img src="./assets/shop/img/team/team-mem-0.png" alt="JSOFT">
                                                 </div>
                                             </div>
                                             <div class="col-lg-6 col-md-6">
