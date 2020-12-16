@@ -1,81 +1,3 @@
-/*
-*
-* ------------------------------------------------------------------
-*[Master Stylesheet]
-*
-* Project: Cardoor - Car Rental HTML Template
-* Version: 
-* Created : 13.02.2018
-* Author Name: alen dui
-* Author URI: http://alendkidjt.com
-* Description: Cardoor it is a modern and clean designed Car Rental 100% Responsive HTML Template.
-*
-* -------------------------------------------------------------------
-*
-*/
-
-/*===========================
-*	[Table of Contents]
-* ===========================
-*
-*	01. Theme Defualt CSS
-*	02. Header Top CSS Start
-*	03. Header Bottom CSS Start
-*       3.1 - Logo Area
-*       3.2 - Main Menu Area
-*	04. Slider Area CSS Start
-*	05. About Area CSS Start
-*	06. Partner Area CSS Start
-*	07. Service Area CSS Start
-*	08. Home 3 Service Area CSS Start
-*	09. Fun Fact Area CSS Start
-*	10. Choose Car Area CSS Start
-*		10.1 - Popular Cars Css Start
-*		10.2 - Newest Cars Css Start
-*	11. Pricing Area CSS Start
-*	12. Testimonial Area CSS Start
-*	13. Mobile Apps CSS Start
-*	14. Article Area CSS Start
-*	15. Footer Area CSS Start
-*	16. Preloader Area CSS Start
-*	17. Home Page Two Start
-*		17.1 - SlideShow CSS
-*		17.2 - Book Car CSS
-*		17.3 - About Area CSS
-*		17.4 - Car Choose Area CSS
-*		17.5 - Team Area CSS
-*	18. Home Page Three Start
-*		18.1 - Slider Area CSS
-*		18.2 - Book Car CSS
-*		18.3 - What Do Area CSS
-*		18.4 - What Choose CSS
-*		18.5 - Our Cars CSS
-*	19. Car Page Css Start
-*		19.1 Page Title CSS
-*		19.2 Car List CSS
-*		19.3 Page Pagination CSS
-*		19.4 Without Sidebar Car Page CSS Here
-*		19.5 Sidebar CSS Here
-*	20. Car Details Page Css Start
-*	21. Service Page Css Start
-*	22. Article Details Page Css
-*	23. About Page Css
-*	24. FAQ Page Css
-*	25. Gallery Page Css
-*	26. Packages Page Css
-*	27. Login Page Css
-*	28. $404 ERROR Page Css
-*	29. Driver Page Css
-*
-*	Responsive Css Include on css/responsive.css
-*
-*/
-
-/*==========================================
-    Author Style Here
-==========================================*/
-
-/*== Theme Defualt CSS ==*/
 
 .overlay {
 	position: relative;
@@ -1313,13 +1235,13 @@ a.slicknav_btn {
 }
 
 .footer-widget-area {
-	background-color: #1e2228;
+	background-color: #f4f6f9;
 	padding: 60px 0;
 }
 
 .footer-widget-area h2,
 .footer-widget-area {
-	color: #fff;
+	color: #000;
 }
 
 .singlefooter-widget h2 {
@@ -1381,16 +1303,6 @@ a.slicknav_btn {
 	width: 50px;
 }
 
-.recent-post li {
-	background-color: #000;
-	font-weight: 600;
-	font-size: 13px;
-	letter-spacing: 1.3px;
-	margin-bottom: 15px;
-	padding: 20px;
-	position: relative;
-}
-
 .recent-post li:last-child {
 	margin-bottom: 0;
 }
@@ -1419,7 +1331,7 @@ a.slicknav_btn {
 }
 
 .recent-post li {
-	background-color: #000;
+	background-color: #d2dcef;
 	font-weight: 600;
 	letter-spacing: 1.3px;
 	margin-bottom: 15px;
@@ -1479,9 +1391,10 @@ a.slicknav_btn {
 }
 
 .footer-bottom-area {
-	background-color: #000;
-	color: #eaeaea;
+	background-color: #f4f6f9;
+	color: #000;
 	padding: 15px 0;
+	border-top: 1px solid #e3eaef;
 }
 
 /*== Footer Area CSS End ==*/
@@ -1557,7 +1470,7 @@ body,
 }
 
 .slideshowcontent h1 {
-	color: #ffd000;
+	color: #6777ef;
 	margin-bottom: 20px;
 }
 
