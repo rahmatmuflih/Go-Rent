@@ -1,3 +1,9 @@
+<?php 
+session_start();
+include('inc/customer/koneksi.php');
+error_reporting(0);
+?>  
+   
     <?php include('./inc/customer/header.php');?>
     <!--== Page Title Area Start ==-->
     <section id="page-title-area" class="section-padding overlay">
@@ -27,20 +33,35 @@
                     <div class="car-list-content">
                         <div class="row">
                             <!-- Single Car Start -->
+                            <?php
+                                function rupiah($angka){
+        
+                                    $hasil_rupiah = "Rp " . number_format($angka,2,',','.');
+                                    return $hasil_rupiah;
+                                
+                                } 
+                                $sql = "SELECT kendaraan.*,merek.NamaMerek,merek.id as bid  from kendaraan join merek on merek.id=kendaraan.Merek_kendaraan";
+                                $query = $dbh -> prepare($sql);
+                                $query->execute();
+                                $results=$query->fetchAll(PDO::FETCH_OBJ);
+                                $cnt=1;
+                                if($query->rowCount() > 0){
+                                    foreach($results as $result){  
+                            ?>
                             <div class="col-lg-6 col-md-6">
                                 <div class="single-car-wrap">
-                                    <img class="car-list-thumb" src="" alt="">
+                                    <img class="car-list-thumb" src="admin/img/mobil/<?php echo htmlentities($result->gambar_kendaraan);?>" alt="">
                                     <div class="car-list-info without-bar">
                                         <h2></h2>
-                                        <h5>Rp.  /hari</h5>
+                                        <h5><?php echo rupiah($result->Harga_perhari);?>/hari</h5>
                                         <ul class="car-info-list">
-                                            <li> AC
+                                            <li> <?php if($result->status == "1"){?><div class="badge badge-success">Tersedia</div><?php ;} else { ?><div class="badge badge-danger">Tidak Tersedia</div><?php ;} ?>
                                             </li>
-                                            <li> Supir
+                                            <li> <?php if($result->AirConditioner == "1"){?>AC<?php ;} else { ?>NON AC<?php ;} ?>
                                             </li>
-                                            <li> Diesel
+                                            <li> <?php echo htmlentities($result->NamaMerek)?>
                                             </li>
-                                            <li> Auto
+                                            <li> <?php echo htmlentities($result->transmisi)?>
                                             </li>
                                             
                                         </ul>
@@ -56,6 +77,7 @@
                                     </div>
                                 </div>
                             </div>
+                            <?php }} ?>
                             <!-- Single Car End -->
 
                             
