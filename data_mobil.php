@@ -1,13 +1,4 @@
-<<<<<<< HEAD
     <?php include('./inc/koneksi.php') ?>
-=======
-<?php 
-session_start();
-include('inc/customer/koneksi.php');
-error_reporting(0);
-?>  
-   
->>>>>>> eff0eec87e37ab4060eee666d55366c338101257
     <?php include('./inc/customer/header.php');?>
     
     <!--== Page Title Area Start ==-->
@@ -40,7 +31,6 @@ error_reporting(0);
                             <!-- Single Car Start -->
                             <?php
                                 function rupiah($angka){
-<<<<<<< HEAD
 	
                                     $hasil_rupiah = "Rp " . number_format($angka,2,',','.');
                                     return $hasil_rupiah;
@@ -48,7 +38,7 @@ error_reporting(0);
                                 }
 
                                 $sql ='SELECT * FROM kendaraan , merek 
-                                where kendaraan.Merek_kendaraan=merek.id ORDER BY kendaraan.id ASC';
+                                WHERE kendaraan.Merek_kendaraan=merek.id ORDER BY kendaraan.id ASC';
                                 $query=$dbh -> prepare($sql);
                                 $query -> execute();
                                 $results = $query -> fetchAll(PDO::FETCH_OBJ);
@@ -86,35 +76,6 @@ error_reporting(0);
                                                     echo 'Tidak Tersedia';
                                                 }
                                             ?>
-=======
-        
-                                    $hasil_rupiah = "Rp " . number_format($angka,2,',','.');
-                                    return $hasil_rupiah;
-                                
-                                } 
-                                $sql = "SELECT kendaraan.*,merek.NamaMerek,merek.id as bid  from kendaraan join merek on merek.id=kendaraan.Merek_kendaraan";
-                                $query = $dbh -> prepare($sql);
-                                $query->execute();
-                                $results=$query->fetchAll(PDO::FETCH_OBJ);
-                                $cnt=1;
-                                if($query->rowCount() > 0){
-                                    foreach($results as $result){  
-                            ?>
-                            <div class="col-lg-6 col-md-6">
-                                <div class="single-car-wrap">
-                                    <img class="car-list-thumb" src="admin/img/mobil/<?php echo htmlentities($result->gambar_kendaraan);?>" alt="">
-                                    <div class="car-list-info without-bar">
-                                        <h2></h2>
-                                        <h5><?php echo rupiah($result->Harga_perhari);?>/hari</h5>
-                                        <ul class="car-info-list">
-                                            <li> <?php if($result->status == "1"){?><div class="badge badge-success">Tersedia</div><?php ;} else { ?><div class="badge badge-danger">Tidak Tersedia</div><?php ;} ?>
-                                            </li>
-                                            <li> <?php if($result->AirConditioner == "1"){?>AC<?php ;} else { ?>NON AC<?php ;} ?>
-                                            </li>
-                                            <li> <?php echo htmlentities($result->NamaMerek)?>
-                                            </li>
-                                            <li> <?php echo htmlentities($result->transmisi)?>
->>>>>>> eff0eec87e37ab4060eee666d55366c338101257
                                             </li>
                                         </ul>
                                         <p class="rating">
@@ -128,11 +89,7 @@ error_reporting(0);
                                     </div>
                                 </div>
                             </div>
-<<<<<<< HEAD
                             <?php $cnt=$cnt+1; }} ?>
-=======
-                            <?php }} ?>
->>>>>>> eff0eec87e37ab4060eee666d55366c338101257
                             <!-- Single Car End -->
                         </div>
                     </div>
