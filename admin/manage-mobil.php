@@ -102,36 +102,35 @@ $msg="Data Berhasil dihapus";
         </thead>
         <tbody>
             <?php 
-                $sql = "SELECT * from  kendaraan join merek on merek.id=kendaraan.Merek_kendaraan";
-                $query = $dbh -> prepare($sql);
-                $query->execute();
-                $results=$query->fetchAll(PDO::FETCH_OBJ);
                 function rupiah($angka){
 	
                     $hasil_rupiah = "Rp " . number_format($angka,2,',','.');
                     return $hasil_rupiah;
                  
                 }
-
+                $sql = "SELECT kendaraan.id,kendaraan.Nama_kendaraan,kendaraan.transmisi,kendaraan.Bahanbakar,kendaraan.Tahun_kendaraan,kendaraan.Harga_perhari,kendaraan.status,kendaraan.Merek_kendaraan,merek.NamaMerek from  kendaraan join merek on merek.id=kendaraan.Merek_kendaraan";
+                $query = $dbh -> prepare($sql);
+                $query->execute();
+                $results=$query->fetchAll(PDO::FETCH_OBJ);
                 $cnt=1;
                 if($query->rowCount() > 0){
-                    foreach($results as $result){
+                    foreach($results as $res){
             ?>	
                 <tr>
                     <td><?php echo htmlentities($cnt);?></td>
-					<td><?php echo htmlentities($result->Nama_kendaraan);?></td>
-					<td><?php echo htmlentities($result->NamaMerek);?></td>
-					<td><?php echo htmlentities($result->transmisi);?></td>
-					<td><?php echo htmlentities($result->Bahanbakar);?></td>
-					<td><?php echo htmlentities($result->Tahun_kendaraan);?></td>
-					<td><?php echo rupiah($result->Harga_perhari);?></td>
-                    <td><?php if($result->status == "1"){?><div class="badge badge-success">Tersedia</div><?php } else { ?><div class="badge badge-danger">Tidak Tersedia</div><?php } ; ?></td>
+					<td><?php echo htmlentities($res->Nama_kendaraan); ?></td>
+					<td><?php echo htmlentities($res->NamaMerek);?></td>
+					<td><?php echo htmlentities($res->transmisi);?></td>
+					<td><?php echo htmlentities($res->Bahanbakar);?></td>
+					<td><?php echo htmlentities($res->Tahun_kendaraan);?></td>
+					<td><?php echo rupiah($res->Harga_perhari);?></td>
+                    <td><?php if($res->status == "1"){?><div class="badge badge-success">Tersedia</div><?php ;} else { ?><div class="badge badge-danger">Tidak Tersedia</div><?php ;} ?></td>
                     <td>
-                        <a href="edit-mobil.php?id=<?php echo $result->id;?>" class="btn btn-sm btn-primary"><i class="fas fa-edit"></i></a>
-                        <a href="manage-mobil.php?del=<?php echo $result->id;?>" onclick="return confirm('Do you want to delete');" class="btn btn-sm btn-danger"><i class="fas fa-trash"></i></a>
+                        <a href="edit-mobil.php?id=<?php echo ($res->id);?>" class="btn btn-sm btn-primary"><i class="fas fa-edit"></i></a>
+                        <a href="manage-mobil.php?del=<?php echo ($res->id);?>" onclick="return confirm('Do you want to delete');" class="btn btn-sm btn-danger"><i class="fas fa-trash"></i></a>
                     </td>
                 </tr>
-                <?php $cnt=$cnt+1; }} ?>
+                <?php $cnt=$cnt+1; } } ?>
         </tbody>
         </table>
     </section>
