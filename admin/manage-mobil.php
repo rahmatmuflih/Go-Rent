@@ -83,7 +83,7 @@ $msg="Data Berhasil dihapus";
         <div class="section-header">
             <h1>Data Mobil</h1>
         </div>
-        <a href="tambah-mobil.php" class="btn btn-primary mb-3"><i class="fas fa-plus"></i> Tambah merek</a>
+        <a href="tambah-mobil.php" class="btn btn-primary mb-3"><i class="fas fa-plus"></i> Tambah mobil</a>
         <?php if($error){?><div class="alert alert-danger alert-dismissible fade show" role="alert">:<?php echo htmlentities($error); ?> </div><?php } 
 				else if($msg){?><div class="alert alert-success alert-dismissible fade show" role="alert"><?php echo htmlentities($msg); ?> </div><?php }?>
         <table class="table table-hover table-striped table-border">
