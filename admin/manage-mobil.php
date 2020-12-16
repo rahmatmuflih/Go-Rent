@@ -1,23 +1,22 @@
 <?php
-session_start();
-error_reporting(0);
-include('../inc/koneksi.php');
-if(strlen($_SESSION['alogin'])==0)
-	{	
-header('location:index.php');
-}
-else{
-if(isset($_GET['del']))
-{
-$id=$_GET['del'];
-$sql = "delete from kendaraan  WHERE id=:id";
-$query = $dbh->prepare($sql);
-$query -> bindParam(':id',$id, PDO::PARAM_STR);
-$query -> execute();
-$msg="Data Berhasil dihapus";
-
-}
- ?>
+  session_start();
+  error_reporting(0);
+  include('../inc/koneksi.php');
+  if(strlen($_SESSION['alogin'])==0)
+    {	
+  header('location:index.php');
+  }
+  else{
+  if(isset($_GET['del']))
+  {
+  $id=$_GET['del'];
+  $sql = "delete from kendaraan  WHERE id=:id";
+  $query = $dbh->prepare($sql);
+  $query -> bindParam(':id',$id, PDO::PARAM_STR);
+  $query -> execute();
+  $msg="Data Berhasil dihapus";
+  }
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -81,56 +80,56 @@ $msg="Data Berhasil dihapus";
     <div class="main-content">
     <section class="section">
         <div class="section-header">
-            <h1>Data Mobil</h1>
+        <h1>Data Mobil</h1>
         </div>
         <a href="tambah-mobil.php" class="btn btn-primary mb-3"><i class="fas fa-plus"></i> Tambah mobil</a>
         <?php if($error){?><div class="alert alert-danger alert-dismissible fade show" role="alert">:<?php echo htmlentities($error); ?> </div><?php } 
 				else if($msg){?><div class="alert alert-success alert-dismissible fade show" role="alert"><?php echo htmlentities($msg); ?> </div><?php }?>
         <table class="table table-hover table-striped table-border">
         <thead>
-            <tr>
-                <th>No </th>
-                <th>Nama Mobil</th>
-                <th>Merek Mobil</th>
-                <th>Transmisi</th>
-                <th>Bahan Bakar</th>
-                <th>Tahun</th>
-                <th>Harga/hari</th>
-                <th>Status</th>
-                <th>Aksi </th>
-            </tr>
+          <tr>
+            <th>No </th>
+            <th>Nama Mobil</th>
+            <th>Merek Mobil</th>
+            <th>Transmisi</th>
+            <th>Bahan Bakar</th>
+            <th>Tahun</th>
+            <th>Harga/hari</th>
+            <th>Status</th>
+            <th>Aksi </th>
+          </tr>
         </thead>
         <tbody>
             <?php 
-                function rupiah($angka){
+              function rupiah($angka){
 	
-                    $hasil_rupiah = "Rp " . number_format($angka,2,',','.');
-                    return $hasil_rupiah;
+                $hasil_rupiah = "Rp " . number_format($angka,2,',','.');
+                return $hasil_rupiah;
                  
-                }
-                $sql = "SELECT kendaraan.id,kendaraan.Nama_kendaraan,kendaraan.transmisi,kendaraan.Bahanbakar,kendaraan.Tahun_kendaraan,kendaraan.Harga_perhari,kendaraan.status,kendaraan.Merek_kendaraan,merek.NamaMerek from  kendaraan join merek on merek.id=kendaraan.Merek_kendaraan";
-                $query = $dbh -> prepare($sql);
-                $query->execute();
-                $results=$query->fetchAll(PDO::FETCH_OBJ);
-                $cnt=1;
-                if($query->rowCount() > 0){
-                    foreach($results as $res){
+              }
+              $sql = "SELECT kendaraan.id,kendaraan.Nama_kendaraan,kendaraan.transmisi,kendaraan.Bahanbakar,kendaraan.Tahun_kendaraan,kendaraan.Harga_perhari,kendaraan.status,kendaraan.Merek_kendaraan,merek.NamaMerek from  kendaraan join merek on merek.id=kendaraan.Merek_kendaraan";
+              $query = $dbh -> prepare($sql);
+              $query->execute();
+              $results=$query->fetchAll(PDO::FETCH_OBJ);
+              $cnt=1;
+              if($query->rowCount() > 0){
+                foreach($results as $res){
             ?>	
-                <tr>
-                    <td><?php echo htmlentities($cnt);?></td>
-					<td><?php echo htmlentities($res->Nama_kendaraan); ?></td>
-					<td><?php echo htmlentities($res->NamaMerek);?></td>
-					<td><?php echo htmlentities($res->transmisi);?></td>
-					<td><?php echo htmlentities($res->Bahanbakar);?></td>
-					<td><?php echo htmlentities($res->Tahun_kendaraan);?></td>
-					<td><?php echo rupiah($res->Harga_perhari);?></td>
-                    <td><?php if($res->status == "1"){?><div class="badge badge-success">Tersedia</div><?php ;} else { ?><div class="badge badge-danger">Tidak Tersedia</div><?php ;} ?></td>
-                    <td>
-                        <a href="edit-mobil.php?id=<?php echo ($res->id);?>" class="btn btn-sm btn-primary"><i class="fas fa-edit"></i></a>
-                        <a href="manage-mobil.php?del=<?php echo ($res->id);?>" onclick="return confirm('Do you want to delete');" class="btn btn-sm btn-danger"><i class="fas fa-trash"></i></a>
-                    </td>
-                </tr>
-                <?php $cnt=$cnt+1; } } ?>
+            <tr>
+              <td><?php echo htmlentities($cnt);?></td>
+              <td><?php echo htmlentities($res->Nama_kendaraan); ?></td>
+              <td><?php echo htmlentities($res->NamaMerek);?></td>
+              <td><?php echo htmlentities($res->transmisi);?></td>
+              <td><?php echo htmlentities($res->Bahanbakar);?></td>
+              <td><?php echo htmlentities($res->Tahun_kendaraan);?></td>
+              <td><?php echo rupiah($res->Harga_perhari);?></td>
+              <td><?php if($res->status == "1"){?><div class="badge badge-success">Tersedia</div><?php ;} else { ?><div class="badge badge-danger">Tidak Tersedia</div><?php ;} ?></td>
+              <td>
+                <a href="edit-mobil.php?id=<?php echo ($res->id);?>" class="btn btn-sm btn-primary"><i class="fas fa-edit"></i></a>
+                <a href="manage-mobil.php?del=<?php echo ($res->id);?>" onclick="return confirm('Do you want to delete');" class="btn btn-sm btn-danger"><i class="fas fa-trash"></i></a>
+              </td>
+            </tr>
+            <?php $cnt=$cnt+1; } } ?>
         </tbody>
         </table>
     </section>
