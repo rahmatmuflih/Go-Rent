@@ -160,22 +160,17 @@ else{
                             <label for="">Merek Mobil</label>
                             <select name="merekmobil" class="form-control" required>
                             <option value="<?php echo htmlentities($result->Merek_kendaraan);?>">--<?php echo htmlentities($result->NamaMerek);?>--</option>
-                            <?php $ret="select id,NamaMerek from merek";
+                            <?php 
+                                $ret="select id,Namakategori from kategori";
                                 $query= $dbh -> prepare($ret);
-                                //$query->bindParam(':id',$id, PDO::PARAM_STR);
                                 $query-> execute();
-                                $resultss = $query -> fetchAll(PDO::FETCH_OBJ);
-                                if($query -> rowCount() > 0)
+                                $results = $query -> fetchAll(PDO::FETCH_OBJ);
+                                if($query -> rowCount() > 0){
+                                    foreach($results as $res)
                                 {
-                                foreach($resultss as $results)
-                                {
-                                if($results->NamaMerek==$bdname)
-                                {
-                                continue;
-                                } else{
                             ?>
-                            <option value="<?php echo htmlentities($$bdname->id);?>"><?php echo htmlentities($$bdname->NamaMerek);?></option>
-                            <?php }} }?>
+                            <option value="<?php echo htmlentities($res->id);?>"><?php echo htmlentities($res->Namakategori);?></option>
+                            <?php }} ?>
                             </select>
                         </div>
                         <div class="form-group">
