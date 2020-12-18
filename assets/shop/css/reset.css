@@ -115,8 +115,7 @@ ul li {
 }
 
 ::selection {
-    background-color: transparent;
-    color: #1e33ef;
+    user-select: none;
 }
 
 /**

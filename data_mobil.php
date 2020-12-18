@@ -1,4 +1,4 @@
-    <?php include('./inc/koneksi.php') ?>
+    <?php include('./inc/koneksi.php'); ?>
     <?php include('./inc/customer/header.php');?>
     
     <!--== Page Title Area Start ==-->
@@ -37,7 +37,8 @@
                                      
                                 }
 
-                                $sql ='SELECT * FROM kendaraan , merek 
+                                $sql ='SELECT gambar_kendaraan,Nama_kendaraan,Harga_perhari,NamaMerek,
+                                AirConditioner,Bahanbakar,transmisi,Multimedia,status FROM kendaraan , merek 
                                 WHERE kendaraan.Merek_kendaraan=merek.id ORDER BY kendaraan.id ASC';
                                 $query=$dbh -> prepare($sql);
                                 $query -> execute();
@@ -53,38 +54,45 @@
                                         <h2><?php echo htmlentities($result->Nama_kendaraan); ?></h2>
                                         <h5><?php echo rupiah($result->Harga_perhari); ?>/hari</h5>
                                         <ul class="car-info-list">
+                                            <li> Merek <br>
+                                                <span class='car-info-value'><?php echo htmlentities($result->NamaMerek) ?></span>
+                                            </li>
                                             <li> AC <br>
-                                            <?php 
-                                                if(htmlentities($result->AirConditioner)==1){
-                                                    echo 'Tersedia';
-                                                } else{
-                                                    echo 'Tidak Tersedia';
-                                                }
-                                            ?>
+                                                <span class='car-info-value'>
+                                                    <?php 
+                                                        if(htmlentities($result->AirConditioner)==1){
+                                                            echo 'Tersedia';
+                                                        } else{
+                                                            echo 'Tidak Tersedia';
+                                                        }
+                                                    ?>
+                                                </span>
                                             </li>
                                             <li> Bahan Bakar <br>
-                                            <?php echo htmlentities($result->Bahanbakar); ?>
+                                                <span class='car-info-value'><?php echo htmlentities($result->Bahanbakar); ?></span>
                                             </li>
                                             <li> Transmisi <br>
-                                            <?php echo htmlentities($result->transmisi); ?>
+                                                <span class='car-info-value'><?php echo htmlentities($result->transmisi); ?></span>
                                             </li>
                                             <li> Multimedia <br>
-                                            <?php 
-                                                if(htmlentities($result->Multimedia)==1){
-                                                    echo 'Tersedia';
-                                                } else{
-                                                    echo 'Tidak Tersedia';
-                                                }
-                                            ?>
+                                                <span class='car-info-value'>
+                                                    <?php 
+                                                        if(htmlentities($result->Multimedia)==1){
+                                                            echo 'Tersedia';
+                                                        } else{
+                                                            echo 'Tidak Tersedia';
+                                                        }
+                                                    ?>
+                                                </span>
                                             </li>
                                         </ul>
-                                        <p class="rating">
-                                            <i class="fa fa-star"></i>
-                                            <i class="fa fa-star"></i>
-                                            <i class="fa fa-star"></i>
-                                            <i class="fa fa-star"></i>
-                                            <i class="fa fa-star unmark"></i>
-                                        </p>
+                                        <?php 
+                                            if(htmlentities($result->status)==1){
+                                                echo '<div class="badge badge-success status">Tersedia</div>';
+                                            } else{
+                                                echo '<div class="badge badge-danger status">Tidak Tersedia</div>';
+                                            }
+                                        ?>
                                         <a href="" class="rent-btn">Detail</a>
                                     </div>
                                 </div>

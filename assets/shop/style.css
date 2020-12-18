@@ -2191,7 +2191,7 @@ body,
 
 .car-list-info h5 {
 	border-bottom: 1px solid #ddd;
-	color: #ffd000;
+	color:#6777ef;
 	font-size: 15px;
 	margin-bottom: 12px;
 	margin-top: 5px;
@@ -2221,32 +2221,21 @@ body,
 	position: relative;
 }
 
-
-
 .car-info-list li + li {
 	border-left: 0;
 }
 
-.rating {
-	color: #ffd000;
+.car-info-value{
+	font-weight: bold;
+	color: black;
+}
+
+.status {
 	font-size: 13px;
 	position: absolute;
-	right: 15px;
-	top: 15px;
+	right: 30px;
+	top: 50px;
 }
-
-.rating i:hover {
-	cursor: pointer;
-}
-
-.rating i.unmark:hover {
-	color: #ffd000;
-}
-
-.rating i.unmark {
-	color: #ddd;
-}
-
 .rent-btn {
 	background-color: #000;
 	color: #fff;
@@ -2259,7 +2248,7 @@ body,
 }
 
 .rent-btn:hover {
-	background-color: #ffd000;
+	background-color:#6777ef;
 	color: #fff;
 }
 
@@ -2270,7 +2259,7 @@ body,
 }
 
 .page-pagi nav li a {
-	border-color: #ffd000;
+	border-color:#6777ef;
 	color: #000;
 	font-weight: 600;
 	-webkit-transition: all 0.4s ease 0s;
@@ -2278,13 +2267,13 @@ body,
 }
 
 .page-pagi nav ul li.active a {
-	background-color: #ffd000 !important;
-	border-color: #ffd000 !important;
+	background-color:#6777ef !important;
+	border-color:#6777ef !important;
 }
 
 .page-pagi nav li a:hover {
-	background-color: #ffd000;
-	border-color: #ffd000;
+	background-color:#6777ef;
+	border-color:#6777ef;
 	color: #fff;
 }
 

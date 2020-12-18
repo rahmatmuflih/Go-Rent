@@ -10,7 +10,7 @@
                             <h2>Tentang Kami</h2>
                             <div class="widget-body">
                                 <!--<img src="./assets/shop/img/logo.png" alt="JSOFT">-->
-                                <p style='font-size:40px;margin-top:-15px;'>GO! Rent</p>
+                                <img src="./assets/img/logo.png" alt="" style='width:150px;height:50px;'>
                                 <p>Lorem ipsum dolored is a sit ameted consectetur adipisicing elit. Nobis magni assumenda distinctio debitis, eum fuga fugiat error reiciendis.</p>
 
                                 <div class="newsletter-area">
