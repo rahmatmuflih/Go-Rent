@@ -3,7 +3,7 @@
 
   session_start();
   error_reporting(0);
-  include('inc/koneksi.php');
+  include('./inc/koneksi.php');
   if(strlen($_SESSION['alogin'])==0) {	
     header('location:index.php');
   } else{
@@ -38,7 +38,7 @@
       <nav class="navbar navbar-expand-lg main-navbar">
         <form class="form-inline mr-auto">
           <ul class="navbar-nav mr-3">
-            <li><a href="#" data-toggle="sidebar" class="nav-link nav-link-lg"><i class="fas fa-bars"></i></a></li>
+            <li><a href="" data-toggle="sidebar" class="nav-link nav-link-lg"><i class="fas fa-bars"></i></a></li>
             <!--<li><a href="#" data-toggle="search" class="nav-link nav-link-lg d-sm-none"><i class="fas fa-search"></i></a></li>-->
           </ul>
         </form>
@@ -68,15 +68,10 @@
       <?php include('../inc/sidebar.php');?>
 
       <!-- Main Content -->
-      <!--rencananya sih, isinya bakalan rekap dari seluruh table-->
-      <h1 style='
-        position:relative;
-        top:300px;
-        margin-left:500px;
-      '>Gatau COY Mau diisi apa!</h1>
+      
 
       <!--Footer-->
-      <footer class="main-footer" style='margin-top:533px;'>
+      <footer class="main-footer" style='margin-top:589px;'>
         <div class="footer-left">
           Copyright &copy; 2020 <div class="bullet"></div> Made with ❤
         </div>
