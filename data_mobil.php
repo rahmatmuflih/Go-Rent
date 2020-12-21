@@ -1,5 +1,7 @@
-    <?php include('./inc/koneksi.php'); ?>
-    <?php include('./inc/customer/header.php');?>
+    <?php 
+        include('./inc/customer/koneksi.php');
+        include('./inc/customer/header.php');
+    ?>
     
     <!--== Page Title Area Start ==-->
     <section id="page-title-area" class="section-padding overlay">
@@ -36,31 +38,36 @@
                                     return $hasil_rupiah;
                                      
                                 }
+                                $batas=6;
+                                $pages=isset($_GET['halaman'])?(int)$_GET['halaman']:1;
+                                $mulai=($pages>1)?($pages*$batas)-$batas:0;
+                                $query=$con->prepare("SELECT gambar_kendaraan,
+                                Nama_kendaraan,Harga_perhari,NamaMerek,AirConditioner,
+                                Bahanbakar,transmisi,Multimedia,status FROM kendaraan,merek 
+                                WHERE kendaraan.Merek_kendaraan=merek.id ORDER BY kendaraan.id ASC LIMIT ?,?");
+                                $query->bind_param('ii',$mulai,$batas);
+                                $query->execute();
+                                $result=$query->get_result();
+                                $total_query=mysqli_query($con,'SELECT id FROM kendaraan');
+                                $total=mysqli_num_rows($total_query);
+                                $pages=ceil($total/$batas);
+                                while($res=$result->fetch_assoc()){
 
-                                $sql ='SELECT gambar_kendaraan,Nama_kendaraan,Harga_perhari,NamaMerek,
-                                AirConditioner,Bahanbakar,transmisi,Multimedia,status FROM kendaraan , merek 
-                                WHERE kendaraan.Merek_kendaraan=merek.id ORDER BY kendaraan.id ASC';
-                                $query=$dbh -> prepare($sql);
-                                $query -> execute();
-                                $results = $query -> fetchAll(PDO::FETCH_OBJ);
-                                $cnt=1;
-                                if($query->rowCount() > 0){
-                                    foreach($results as $result){
                             ?>
                             <div class="col-lg-6 col-md-6">
                                 <div class="single-car-wrap">
-                                    <img class="car-list-thumb" src="./admin/img/mobil/<?php echo htmlentities($result->gambar_kendaraan); ?>" alt="ga bisa tampil euy" width='768px' height='432px'>
+                                    <img class="car-list-thumb" src="./admin/img/mobil/<?php echo $res['gambar_kendaraan']; ?>" alt="ga bisa tampil euy" width='768px' height='432px'>
                                     <div class="car-list-info without-bar">
-                                        <h2><?php echo htmlentities($result->Nama_kendaraan); ?></h2>
-                                        <h5><?php echo rupiah($result->Harga_perhari); ?>/hari</h5>
+                                        <h2><?php echo $res['Nama_kendaraan']; ?></h2>
+                                        <h5><?php echo rupiah($res['Harga_perhari']); ?>/hari</h5>
                                         <ul class="car-info-list">
                                             <li> Merek <br>
-                                                <span class='car-info-value'><?php echo htmlentities($result->NamaMerek) ?></span>
+                                                <span class='car-info-value'><?php echo $res['NamaMerek'] ?></span>
                                             </li>
                                             <li> AC <br>
                                                 <span class='car-info-value'>
                                                     <?php 
-                                                        if(htmlentities($result->AirConditioner)==1){
+                                                        if($res['AirConditioner']==1){
                                                             echo 'Tersedia';
                                                         } else{
                                                             echo 'Tidak Tersedia';
@@ -69,15 +76,15 @@
                                                 </span>
                                             </li>
                                             <li> Bahan Bakar <br>
-                                                <span class='car-info-value'><?php echo htmlentities($result->Bahanbakar); ?></span>
+                                                <span class='car-info-value'><?php echo $res['Bahanbakar']; ?></span>
                                             </li>
                                             <li> Transmisi <br>
-                                                <span class='car-info-value'><?php echo htmlentities($result->transmisi); ?></span>
+                                                <span class='car-info-value'><?php echo $res['transmisi']; ?></span>
                                             </li>
                                             <li> Multimedia <br>
                                                 <span class='car-info-value'>
                                                     <?php 
-                                                        if(htmlentities($result->Multimedia)==1){
+                                                        if($res['Multimedia']==1){
                                                             echo 'Tersedia';
                                                         } else{
                                                             echo 'Tidak Tersedia';
@@ -87,7 +94,7 @@
                                             </li>
                                         </ul>
                                         <?php 
-                                            if(htmlentities($result->status)==1){
+                                            if($res['status']==1){
                                                 echo '<div class="badge badge-success status">Tersedia</div>';
                                             } else{
                                                 echo '<div class="badge badge-danger status">Tidak Tersedia</div>';
@@ -97,7 +104,7 @@
                                     </div>
                                 </div>
                             </div>
-                            <?php $cnt=$cnt+1; }} ?>
+                            <?php } ?>
                             <!-- Single Car End -->
                         </div>
                     </div>
@@ -108,13 +115,27 @@
             <div class="page-pagi">
                 <nav aria-label="Page navigation example">
                     <ul class="pagination">
-                        <li class="page-item"><a class="page-link" href="#">Previous</a></li>
-                        <li class="page-item active"><a class="page-link" href="#">1</a></li>
-                        <li class="page-item"><a class="page-link" href="#">2</a></li>
-                        <li class="page-item"><a class="page-link" href="#">3</a></li>
-                        <li class="page-item"><a class="page-link" href="#">4</a></li>
-                        <li class="page-item"><a class="page-link" href="#">5</a></li>
-                        <li class="page-item"><a class="page-link" href="#">Next</a></li>
+                        <li class="page-item"><a class="page-link" href="?halaman=
+                        <?php 
+                            $_GET['halaman']=1;
+                            if(($_GET['halaman'])>1){ 
+                                echo $_GET['halaman']-1.;
+                            }else{
+                                echo '';
+                            }
+                        ?>">Previous</a></li>
+                        <?php for ($i=1; $i <= $pages ; $i++) { ?>
+                            <li class="page-item"><a class="page-link" href="?halaman=<?php echo $i; ?>"><?php echo $i; ?></a></li>
+                        <?php } ?>
+                        <li class="page-item"><a class="page-link" href="?halaman=
+                        <?php 
+                        $_GET['halaman']=1;
+                        if(($_GET['halaman'])>=1 && ($_GET['halaman'])<$pages) {
+                            echo $_GET['halaman']+1;
+                        } else{
+                            echo '$pages';
+                        }
+                        ?>">Next</a></li>
                     </ul>
                 </nav>
             </div>

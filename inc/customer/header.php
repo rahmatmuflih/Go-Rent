@@ -56,7 +56,7 @@
                 <div class="row">
                     <!--== Logo Start ==-->
                     <div class="col-lg-4">
-                        <a href="index2.html" class="logo">
+                        <a href="index.php" class="logo">
                             <img src="./assets/img/logo-light-0.png" alt="" style='width:150px;height:50px;'>
                         </a>
                     </div>
