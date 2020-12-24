@@ -139,6 +139,14 @@
     <!--=== Mian Js ===-->
     <script src="./assets/shop/js/main.js"></script>
 
+
+    <script src="assets/js/detail_mobil/jquery.min.js"></script>
+    <script src="assets/js/detail_mobil/bootstrap.min.js"></script> 
+    <script src="assets/js/detail_mobil/interface.js"></script> 
+    <script src="assets/switcher/js/switcher.js"></script>
+    <script src="assets/js/detail_mobil/bootstrap-slider.min.js"></script> 
+    <script src="assets/js/detail_mobil/slick.min.js"></script> 
+    <script src="assets/js/detail_mobil/owl.carousel.min.js"></script>
 </body>
 
 </html>

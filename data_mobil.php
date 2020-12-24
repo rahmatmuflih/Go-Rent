@@ -75,8 +75,8 @@
                                                     ?>
                                                 </span>
                                             </li>
-                                            <li> Bahan Bakar <br>
-                                                <span class='car-info-value'><?php echo $res['Bahanbakar']; ?></span>
+                                            <li style='font-size:11pt;'> Bahan Bakar <br>
+                                                <span class='car-info-value'style='font-size:10pt;'><?php echo $res['Bahanbakar']; ?></span>
                                             </li>
                                             <li> Transmisi <br>
                                                 <span class='car-info-value'><?php echo $res['transmisi']; ?></span>
@@ -95,9 +95,9 @@
                                         </ul>
                                         <?php 
                                             if($res['status']==1){
-                                                echo '<div class="badge badge-success status">Tersedia</div>';
+                                                echo '<div class="badge bg-success status">Tersedia</div>';
                                             } else{
-                                                echo '<div class="badge badge-danger status">Tidak Tersedia</div>';
+                                                echo '<div class="badge bg-danger status">Tidak Tersedia</div>';
                                             }
                                         ?>
                                         <a href="" class="rent-btn">Detail</a>
