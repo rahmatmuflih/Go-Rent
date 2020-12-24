@@ -64,13 +64,13 @@
 <body class="loader-active">
 
     <!--== Preloader Area Start ==-->
-    <div class="preloader">
+    <!--<div class="preloader">
         <div class="preloader-spinner">
             <div class="loader-content">
                 <img src="./assets/shop/img/preloader.gif" alt="JSOFT">
             </div>
         </div>
-    </div>
+    </div>-->
     <!--== Preloader Area End ==-->
 
     <!--== Header Area Start ==-->
@@ -79,7 +79,7 @@
         <!--== Header Top End ==-->
 
         <!--== Header Bottom Start ==-->
-        <div id="header-bottom" style='background-color:rgba(103, 119, 239,0.8);'>
+        <div id="header-bottom" style='background-color:rgba(103, 119, 239,1);z-index:1;'>
             <div class="container">
                 <div class="row">
                     <!--== Logo Start ==-->

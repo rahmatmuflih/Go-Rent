@@ -41,7 +41,7 @@
                                 $batas=6;
                                 $pages=isset($_GET['halaman'])?(int)$_GET['halaman']:1;
                                 $mulai=($pages>1)?($pages*$batas)-$batas:0;
-                                $query=$con->prepare("SELECT gambar_kendaraan,
+                                $query=$con->prepare("SELECT kendaraan.id,gambar_kendaraan,
                                 Nama_kendaraan,Harga_perhari,NamaMerek,AirConditioner,
                                 Bahanbakar,transmisi,Multimedia,status FROM kendaraan,merek 
                                 WHERE kendaraan.Merek_kendaraan=merek.id ORDER BY kendaraan.id ASC LIMIT ?,?");
@@ -100,7 +100,7 @@
                                                 echo '<div class="badge bg-danger status">Tidak Tersedia</div>';
                                             }
                                         ?>
-                                        <a href="" class="rent-btn">Detail</a>
+                                        <a href="detail_mobil.php?vhid=<?php echo $res['id'];?>" class="rent-btn">Detail</a>
                                     </div>
                                 </div>
                             </div>

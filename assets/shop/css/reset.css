@@ -116,7 +116,7 @@ ul li {
 }
 
 ::selection {
-    background-color: #fff;
+    background-color:#555;
     color: #1e33ef;
 }
 
