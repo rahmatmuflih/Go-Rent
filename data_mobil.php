@@ -116,25 +116,36 @@
                 <nav aria-label="Page navigation example">
                     <ul class="pagination">
                         <li class="page-item"><a class="page-link" href="?halaman=
-                        <?php 
-                            $_GET['halaman']=1;
-                            if(($_GET['halaman'])>1){ 
-                                echo $_GET['halaman']-1.;
+                        <?php
+                            if(($_GET['halaman'])>1){
+                                echo $_GET['halaman']-1;
                             }else{
-                                echo '';
+                                echo 1;
                             }
                         ?>">Previous</a></li>
                         <?php for ($i=1; $i <= $pages ; $i++) { ?>
-                            <li class="page-item"><a class="page-link" href="?halaman=<?php echo $i; ?>"><?php echo $i; ?></a></li>
+                            <li 
+                            <?php
+                                if(isset($_GET['halaman'])){
+                                    if ($_GET['halaman']==$i) {
+                                        echo'class="page-item active"';
+                                    } else{
+                                        echo'class="page-item"';
+                                    }
+                                } else{
+                                    $_GET['halaman']=1;
+                                    echo'class="page-item active"';
+                                }
+                            ?>
+                            ><a class="page-link data-toggle='tab'" href="?halaman=<?php echo $i; ?>"><?php echo $i; ?></a></li>
                         <?php } ?>
                         <li class="page-item"><a class="page-link" href="?halaman=
-                        <?php 
-                        $_GET['halaman']=1;
-                        if(($_GET['halaman'])>=1 && ($_GET['halaman'])<$pages) {
-                            echo $_GET['halaman']+1;
-                        } else{
-                            echo '$pages';
-                        }
+                        <?php
+                            if(($_GET['halaman'])>=1 && ($_GET['halaman'])<$pages) {
+                                echo $_GET['halaman']+1;
+                            } else{
+                                echo $pages;
+                            }
                         ?>">Next</a></li>
                     </ul>
                 </nav>

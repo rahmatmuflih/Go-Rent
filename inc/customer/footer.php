@@ -69,11 +69,11 @@
                                 <p>Lorem ipsum doloer sited amet, consectetur adipisicing elit. nibh auguea, scelerisque sed</p>
 
                                 <ul class="get-touch">
-                                    <li><i class="fa fa-map-marker"></i> Bintaro, Jakarta Selatan</li>
-                                    <li><i class="fa fa-mobile"></i> +62 820 7892 6578</li>
+                                    <li><i class="fa fa-map-marker"></i> Universitas Amikom Yogyakarta</li>
+                                    <li><i class="fa fa-mobile"></i> +62 800 0000 0000</li>
                                     <li><i class="fa fa-envelope"></i> cs@gorent.com</li>
                                 </ul>
-                                <a href="https://goo.gl/maps/b5mt45MCaPB2" class="map-show" target="_blank">Lihat Lokasi</a>
+                                <a href="https://goo.gl/maps/mnx5RDpbySeqcnr58" class="map-show" target="_blank">Lihat Lokasi</a>
                             </div>
                         </div>
                     </div>
