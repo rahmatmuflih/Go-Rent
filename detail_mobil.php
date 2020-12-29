@@ -1,24 +1,53 @@
-<?php 
+<?php
   include('./inc/customer/header.php');
   include('./inc/customer/koneksi.php');
+
+  $vhid=intval($_GET['vhid']);
+
+  if(isset($_POST['submit'])){
+    $query_input='INSERT INTO transaksi (id_transaksi,userEmail,id_kendaraan,tanggal_pemesanan,tanggal_kembali,pesan) 
+    VALUES ("","'.$_SESSION['id_user'].'","'.$vhid.'","'.$_POST['tanggal_pemesanan'].'",
+    "'.$_POST['tanggal_kembali'].'","'.$_POST['pesan'].'")';
+    $result_input=mysqli_query($con,$query_input) or die(mysqli_error());
+
+    echo '
+    <script>
+      alert("data sukses ditambahkan");
+      window.location="data_mobil.php";
+    </script>
+    ';
+  }
+
   function rupiah($angka){
 	
     $hasil_rupiah = "Rp " . number_format($angka,2,',','.');
     return $hasil_rupiah;
      
   }
-  $vhid=intval($_GET['vhid']);
   $related_cars='car';
-  $query=$con->prepare("SELECT kendaraan.id,gambar_kendaraan,
+  $query_tampil=$con->prepare("SELECT kendaraan.id,gambar_kendaraan,
   Nama_kendaraan,Harga_perhari,NamaMerek,AirConditioner,
   Bahanbakar,transmisi,Multimedia,Deskripsi,Tahun_kendaraan FROM kendaraan,merek 
   WHERE kendaraan.Merek_kendaraan=merek.id AND kendaraan.id=?");
-  $query->bind_param('i',$vhid);
-  $query->execute();
-  $result=$query->get_result();
-  while($res=$result->fetch_assoc()){
+  $query_tampil->bind_param('i',$vhid);
+  $query_tampil->execute();
+  $result_tampil=$query_tampil->get_result();
+  while($res=$result_tampil->fetch_assoc()){
     $related_cars=$res['NamaMerek'];
 ?>
+
+<style>
+  input[type="date"]:before {
+    content: attr(placeholder) !important;
+    color: #aaa;
+    margin-right: 0.5em;
+  }
+  input[type="date"]:focus:before,
+  input[type="date"]:valid:before {
+    content: "";
+  }
+</style>
+
 <img src="./admin/img/mobil/<?php echo $res['gambar_kendaraan']; ?>" alt=""class='image-detail'>
 <!--Listing-detail-->
 <section class="listing-detail">
@@ -111,18 +140,26 @@
           </div>
           <form method="post">
             <div class="form-group">
-              <input type="text" class="form-control" name="fromdate" placeholder="From Date(dd/mm/yyyy)" required>
+              <input type="date" class="form-control" name="tanggal_pemesanan" placeholder='Dari' required>
             </div>
             <div class="form-group">
-              <input type="text" class="form-control" name="todate" placeholder="To Date(dd/mm/yyyy)" required>
+              <input type="date" class="form-control" name="tanggal_kembali" placeholder='Sampai' required>
             </div>
             <div class="form-group">
-              <textarea rows="4" class="form-control" name="message" placeholder="Message" required></textarea>
+              <textarea rows="4" class="form-control" name="pesan" placeholder="Pesan" required></textarea>
             </div>
-            <div class="form-group">
-              <input type="submit" class="btn"  name="submit" value="Rental Sekarang">
-            </div>   
-            <a href="" class="btn btn-xs uppercase" data-toggle="modal" data-dismiss="modal">Masuk Untuk Rental</a>
+            <?php
+              if(isset($_SESSION['id_user'])){
+                echo '
+                <div class="form-group">
+                  <input type="submit" class="btn"  name="submit" value="Rental Sekarang">
+                </div> ';
+              } else {
+                echo '
+                  <a href="login.php?location='.urlencode($_SERVER['REQUEST_URI']).'" class="btn btn-xs uppercase">Masuk Untuk Rental</a>
+                ';
+              }
+            ?>
           </form>
         </div>
       </aside>
@@ -137,14 +174,14 @@
       <h3>Mobil Dengan Merek Serupa</h3>
       <div class="row">
         <?php
-          $query=$con->prepare("SELECT kendaraan.id,gambar_kendaraan,
+          $query_tampil_serupa=$con->prepare("SELECT kendaraan.id,gambar_kendaraan,
           Nama_kendaraan,Harga_perhari,NamaMerek,Bahanbakar,transmisi,Tahun_kendaraan FROM kendaraan,merek 
           WHERE kendaraan.Merek_kendaraan=merek.id AND NamaMerek=? AND kendaraan.id!=?");
-          $query->bind_param('si',$related_cars,$vhid);
-          $query->execute();
-          $result=$query->get_result();
-          if (mysqli_num_rows($result)>0) {
-            while($res=$result->fetch_assoc()){
+          $query_tampil_serupa->bind_param('si',$related_cars,$vhid);
+          $query_tampil_serupa->execute();
+          $result_tampil_serupa=$query_tampil_serupa->get_result();
+          if (mysqli_num_rows($result_tampil_serupa)>0) {
+            while($res=$result_tampil_serupa->fetch_assoc()){
         ?>
         <div class="col-md-4 grid_listing">
           <div class="product-listing-m gray-bg">

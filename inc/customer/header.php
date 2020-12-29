@@ -1,3 +1,8 @@
+<?php
+    if(!isset($_SESSION)){
+        session_start();
+    }
+?>
 <!DOCTYPE html>
 <html class="no-js" lang="zxx">
 
@@ -80,18 +85,27 @@
                     <div class="col-lg-8 d-none d-xl-block">
                         <nav class="mainmenu alignright">
                             <ul>
-                                <li><a href="index.php">Beranda</a></li>
-                                <li><a href="data_mobil.php">Mobil</a></li>
-                                <li><a href="">Daftar</a></li>
-                                <li><a href="">Hai, </a>
-                                    <ul>
-                                        <li><a href="">Transaksi</a></li>
-                                        <li><a href="">Ganti Password</a></li>
-                                        <li><a href="">Logout</a></li>
-                                    </ul>
-                                </li>                                
-                                
-                                  <li><a href="">Masuk</a></li>
+                                <li><a href='index.php'>Beranda</a></li>
+                                <li><a href='data_mobil.php'>Mobil</a></li>
+                                <?php
+                                    if (isset($_SESSION['id_user'])){
+                                        $nama = $_SESSION['NamaLengkap'];
+                                        $nama_split=explode(' ',$nama);
+                                        echo '
+                                        <li><a href="">Hai, '.$nama_split[0].'</a>
+                                            <ul>
+                                                <li><a href="profile.php">Profil</a></li>
+                                                <li><a href="logout.php?location='.urlencode($_SERVER['REQUEST_URI']).'">Logout</a></li>
+                                            </ul>
+                                        </li> 
+                                        ';
+                                    } else{
+                                        echo '
+                                            <li><a href="">Daftar</a></li>
+                                            <li><a href="login.php?location='.urlencode($_SERVER['REQUEST_URI']).'">Masuk</a></li>
+                                        ';
+                                    }
+                                ?>
                             </ul>
                         </nav>
                     </div>

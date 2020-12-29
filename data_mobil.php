@@ -1,4 +1,5 @@
-    <?php 
+    <?php
+        session_start();
         include('./inc/customer/koneksi.php');
         include('./inc/customer/header.php');
     ?>
