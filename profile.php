@@ -203,7 +203,7 @@
                       $tanggal=date("Y-m-d",$t);
                       $sql = 'SELECT * FROM  kendaraan RIGHT JOIN transaksi ON 
                       kendaraan.id=transaksi.id_kendaraan LEFT JOIN users ON transaksi.userEmail=users.id_user
-                      WHERE id_user="'.$_SESSION['id_user'].'"AND tanggal_kembali>="'.$tanggal.'"';
+                      WHERE id_user="'.$_SESSION['id_user'].'"AND tanggal_kembali<="'.$tanggal.'"';
                       $query = mysqli_query($con,$sql);
                       if($query){
                         while($res=mysqli_fetch_assoc($query)){

@@ -55,13 +55,13 @@
 <body class="loader-active">
 
     <!--== Preloader Area Start ==-->
-    <!--<div class="preloader">
+    <div class="preloader">
         <div class="preloader-spinner">
             <div class="loader-content">
                 <img src="./assets/shop/img/preloader.gif" alt="JSOFT">
             </div>
         </div>
-    </div>-->
+    </div>
     <!--== Preloader Area End ==-->
 
     <!--== Header Area Start ==-->

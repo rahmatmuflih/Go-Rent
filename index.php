@@ -9,7 +9,6 @@
                             <div class="display-table-cell">
                                 <h1>SEWA MOBIL HARI INI!</h1>
                                 <p>DENGAN HARGA MURAH Rp.250.000 PER HARI PLUS 15% POTONGAN HARGA <br> UNTUK PEMESANAN HARI INI</p>
-
                                 <div class="book-ur-car">
                                     <form action="index2.html">
                                         <div class="pick-location bookinput-item">
