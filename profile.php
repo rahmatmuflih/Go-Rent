@@ -34,6 +34,7 @@
     color:#555;
     height:60px;
     padding-top:20px;
+    width:200px;
   }
   .tab-content{
     margin:30px;
