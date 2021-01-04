@@ -347,8 +347,8 @@ a,
 	fill: #6777ef;
 }
 a:hover, a:focus, .btn-link:hover {
-	color:#ff0012;
-	fill: #ff0012;
+	color:#1e33ef;
+	fill: #1e33ef;
 }
 
 .btn,
@@ -696,13 +696,14 @@ table thead th, table thead td {
   border: medium none;
 }
 .nav-tabs > li a {
-  background: #000000 none repeat scroll 0 0;
+  background:  #ffffff none repeat scroll 0 0;
   border-radius: 0;
-  color: #ffffff;
+  color: #000000;
   font-weight: 800;
   margin-right: 5px;
   padding: 9px 36px;
   text-align:center;
+  width:300px;
 }
 .nav-tabs > li.active > a, .nav-tabs > li.active > a:focus, .nav-tabs > li.active > a:hover {
   color: #ffffff;
@@ -4285,7 +4286,7 @@ table.info-tabel tr td {
   font-size: 14px
 }
 .section-padding {
-  padding: 80px 0;
+  padding: 20px 0;
 }
 .page-heading h2, .page-heading h1, h2 {
   font-size: 36px;

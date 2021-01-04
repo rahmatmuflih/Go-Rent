@@ -1505,20 +1505,18 @@ body,
 /*== Book Car CSS ==*/
 
 .book-ur-car {
-	background-color: rgba(0, 0, 0, 0.6);
 	border-radius: 4px;
 	margin: 70px auto auto;
 	overflow: hidden;
-	padding: 50px 20px;
-	width: 90%;
+	padding: 0;
+	width: 700px;
 }
 
 .bookinput-item {
 	border: 1px solid #fff;
 	display: block;
-	float: left;
-	margin-right: 1%;
-	width: 19.2%;
+	margin-left: 35%;
+	width: 30%;
 	-webkit-transition: 0.4s;
 	transition: 0.4s;
 }
@@ -1732,7 +1730,7 @@ body,
 
 
 .team-member-pro-pic {
-	height: 429px;
+	height: 540px;
 	position: relative;
 }
 
@@ -1747,6 +1745,7 @@ body,
 
 
 .team-member-info {
+	height: 540px;
 	background-color: #eeeeee;
 	padding: 50px 30px;
 }
