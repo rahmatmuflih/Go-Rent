@@ -110,7 +110,7 @@
                     <div class="section-title  text-center">
                         <h2>Dibuat Oleh: Kelompok 6</h2>
                         <span class="title-line"><i class="fa fa-car"></i></span>
-                        <p>Lorem ipsum dolor sit amet elit.</p>
+                        <p>Berikut Daftar Kelompok Kami</p>
                     </div>
                 </div>
                 <!-- Section Title End -->
@@ -183,16 +183,7 @@
                                             <div class="col-lg-6 col-md-6">
                                                 <div class="team-member-info text-center">
                                                     <h4>Rahmat Muflih Arifin</h4>
-                                                    <h5>Developer</h5>
-                                                    <span class="quote-icon"><i class="fa fa-quote-left"></i></span>
-                                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut sollicitudin fermentum dolor. Nunc nec augue urna. Cras varius orci vitae lacinia efficitur.</p>
-                                                    <div class="team-social-icon">
-                                                        <a href="#"><i class="fa fa-facebook"></i></a>
-                                                        <a href="#"><i class="fa fa-twitter"></i></a>
-                                                        <a href="#"><i class="fa fa-linkedin"></i></a>
-                                                        <a href="#"><i class="fa fa-pinterest"></i></a>
-                                                        <a href="#"><i class="fa fa-dribbble"></i></a>
-                                                    </div>
+                                                    <h5>Ketua Kelompok</h5>
                                                 </div>
                                             </div>
                                         </div>
@@ -211,15 +202,6 @@
                                                 <div class="team-member-info text-center">
                                                     <h4>Dhani Setiaji</h4>
                                                     <h5>Developer</h5>
-                                                    <span class="quote-icon"><i class="fa fa-quote-left"></i></span>
-                                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut sollicitudin fermentum dolor. Nunc nec augue urna. Cras varius orci vitae lacinia efficitur.</p>
-                                                    <div class="team-social-icon">
-                                                        <a href="#"><i class="fa fa-facebook"></i></a>
-                                                        <a href="#"><i class="fa fa-twitter"></i></a>
-                                                        <a href="#"><i class="fa fa-linkedin"></i></a>
-                                                        <a href="#"><i class="fa fa-pinterest"></i></a>
-                                                        <a href="#"><i class="fa fa-dribbble"></i></a>
-                                                    </div>
                                                 </div>
                                             </div>
                                         </div>
@@ -237,16 +219,7 @@
                                             <div class="col-lg-6 col-md-6">
                                                 <div class="team-member-info text-center">
                                                     <h4>Muhammad Yahya Ubaid</h4>
-                                                    <h5>Designer</h5>
-                                                    <span class="quote-icon"><i class="fa fa-quote-left"></i></span>
-                                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut sollicitudin fermentum dolor. Nunc nec augue urna. Cras varius orci vitae lacinia efficitur.</p>
-                                                    <div class="team-social-icon">
-                                                        <a href="#"><i class="fa fa-facebook"></i></a>
-                                                        <a href="#"><i class="fa fa-twitter"></i></a>
-                                                        <a href="#"><i class="fa fa-linkedin"></i></a>
-                                                        <a href="#"><i class="fa fa-pinterest"></i></a>
-                                                        <a href="#"><i class="fa fa-dribbble"></i></a>
-                                                    </div>
+                                                    <h5>Developer</h5>
                                                 </div>
                                             </div>
                                         </div>
@@ -264,16 +237,7 @@
                                             <div class="col-lg-6 col-md-6">
                                                 <div class="team-member-info text-center">
                                                     <h4>Tia Anggi Pratiwi</h4>
-                                                    <h5>Marketer</h5>
-                                                    <span class="quote-icon"><i class="fa fa-quote-left"></i></span>
-                                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut sollicitudin fermentum dolor. Nunc nec augue urna. Cras varius orci vitae lacinia efficitur.</p>
-                                                    <div class="team-social-icon">
-                                                        <a href="#"><i class="fa fa-facebook"></i></a>
-                                                        <a href="#"><i class="fa fa-twitter"></i></a>
-                                                        <a href="#"><i class="fa fa-linkedin"></i></a>
-                                                        <a href="#"><i class="fa fa-pinterest"></i></a>
-                                                        <a href="#"><i class="fa fa-dribbble"></i></a>
-                                                    </div>
+                                                    <h5>Pengisi Konten</h5>
                                                 </div>
                                             </div>
                                         </div>
@@ -291,16 +255,7 @@
                                             <div class="col-lg-6 col-md-6">
                                                 <div class="team-member-info text-center">
                                                     <h4>Surdihatera</h4>
-                                                    <h5>Manager</h5>
-                                                    <span class="quote-icon"><i class="fa fa-quote-left"></i></span>
-                                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut sollicitudin fermentum dolor. Nunc nec augue urna. Cras varius orci vitae lacinia efficitur.</p>
-                                                    <div class="team-social-icon">
-                                                        <a href="#"><i class="fa fa-facebook"></i></a>
-                                                        <a href="#"><i class="fa fa-twitter"></i></a>
-                                                        <a href="#"><i class="fa fa-linkedin"></i></a>
-                                                        <a href="#"><i class="fa fa-pinterest"></i></a>
-                                                        <a href="#"><i class="fa fa-dribbble"></i></a>
-                                                    </div>
+                                                    <h5>Copywriter</h5>
                                                 </div>
                                             </div>
                                         </div>
