@@ -17,6 +17,6 @@
               <!-- <li><a class="nav-link" href="datatables-transact.php"><i class="fas fa-money-check-alt"></i> <span>Transaction Table</span></a></li> -->
               <li class="menu-header">Users</li>
               <li><a class="nav-link" href="manage-admin.php"><i class="fas fa-user-shield"></i> <span>Admin</span></a></li>
-              <li><a class="nav-link" href="manage-users.php"><i class="fas fa-user-alt"></i> <span>Customers</span></a></li>
+              <li><a class="nav-link" href="manage-users.php"><i class="fas fa-user-alt"></i> <span>Users</span></a></li>
         </aside>
       </div>

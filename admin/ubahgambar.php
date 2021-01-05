@@ -6,24 +6,24 @@ if(strlen($_SESSION['alogin'])==0){
     header('location:index.php');
 }
 else{
-    if(isset($_POST['submit'])){
-        $merek=$_POST['merek'];
-        $id=$_GET['id'];
-        $sql="update merek set NamaMerek=:merek where id=:id";
-        $query = $dbh->prepare($sql);
-        $query->bindParam(':merek',$merek,PDO::PARAM_STR);
-        $query->bindParam(':id',$id,PDO::PARAM_STR);
-        $query->execute();
-        $lastInsertId = $dbh->lastInsertId();
-        $msg="Merek Berhasil diupdate";
-    }
+    if(isset($_POST['update'])){
+    $gambar=$_FILES["gambar"]["name"];
+    $id=intval($_GET['imgid']);
+    move_uploaded_file($_FILES["gambar"]["tmp_name"],"img/mobil/".$_FILES["gambar"]["name"]);
+    $sql="update kendaraan set gambar_kendaraan=:gambar where id=:id";
+    $query = $dbh->prepare($sql);
+    $query->bindParam(':gambar',$gambar,PDO::PARAM_STR);
+    $query->bindParam(':id',$id,PDO::PARAM_STR);
+    $query->execute();    
+    $msg="Gambar berhasil diupdate";
+}
 ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta content="width=device-width, initial-scale=1, maximum-scale=1, shrink-to-fit=no" name="viewport">
-  <title>Update Merek</title>
+  <title>Update Mobil</title>
 
   <!-- General CSS Files -->
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
@@ -81,42 +81,46 @@ else{
     <div class="main-content">
     <section class="section">
         <div class="section-header">
-            <h1>Form Update Merek</h1>
+            <h1>Form Update Mobil</h1>
         </div>
         <div class="card">
             <div class="card-body">
-            <form name="chngpwd" method="POST" onSubmit="return valid();">
-            <?php if($error){?><div class="alert alert-danger alert-dismissible fade show" role="alert">:<?php echo htmlentities($error); ?> </div><?php } 
+                <?php if($error){?><div class="alert alert-danger alert-dismissible fade show" role="alert">:<?php echo htmlentities($error); ?> </div><?php } 
 				    else if($msg){?><div class="alert alert-success alert-dismissible fade show" role="alert"><?php echo htmlentities($msg); ?> </div><?php }?>
-            <div class="row">
+                <?php 
+                    $id=intval($_GET['imgid']);
+                    $sql ="SELECT gambar_kendaraan from kendaraan where kendaraan.id=:id";
+                    $query = $dbh -> prepare($sql);
+                    $query-> bindParam(':id', $id, PDO::PARAM_STR);
+                    $query->execute();
+                    $results=$query->fetchAll(PDO::FETCH_OBJ);
+                    $cnt=1;
+                    if($query->rowCount() > 0){
+                        foreach($results as $result)
+                    {	
+                ?>
+            <form method="post" class="form-horizontal" enctype="multipart/form-data">
+                <div class="row">
                     <div class="col-md-6">
                         <div class="form-group">
-                            <?php	
-                                $id=$_GET['id'];
-                                $ret="select * from merek where id=:id";
-                                $query= $dbh -> prepare($ret);
-                                $query->bindParam(':id',$id, PDO::PARAM_STR);
-                                $query-> execute();
-                                $results = $query -> fetchAll(PDO::FETCH_OBJ);
-                                $cnt=1;
-                                if($query -> rowCount() > 0){
-                                    foreach($results as $result){
-                            ?>
-                            <label for="">Nama Merek</label>
-                            <input type="text" name="merek" class="form-control" value="<?php echo htmlentities($result->NamaMerek);?>" required>
-                            <?php }} ?>
+                            <label for="">Gambar</label>
+                            <br><img src="img/mobil/<?php echo htmlentities($result->gambar_kendaraan);?>" width="300" height="200" style="border:solid 1px #000">
                         </div>
                     </div>
                     <div class="col-md-6">
-                            <button Type="submit" name="submit" class="btn btn-primary mt-4">Update</button>
+                        <div class="form-group">
+                            <label for="">Gambar</label>
+                            <input type="file" name="gambar" class="form-control" required>
+                        </div>
+                            <button Type="submit" name="update" class="btn btn-primary mt-4">Update</button>
                             <button Type="reset" class="btn btn-danger mt-4">Reset</button>
                     </div>    
                 </div>
             </form>
+            <?php } }?>
             </div>
         </div>
     </section>
 </div>
-
 <?php include('../inc/footer.php');?>
-<?php } ?>
+<?php  } ?>

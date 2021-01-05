@@ -1,4 +1,4 @@
-    <?php
+<?php
         session_start();
         include('./inc/customer/koneksi.php');
         include('./inc/customer/header.php');
@@ -29,6 +29,17 @@
             <div class="row">
                 <!-- Car List Content Start -->
                 <div class="col-lg-12">
+                <div class="row">
+                    <div class="col-md-6"></div>
+                    <div class="col-md-6 pb-5">
+                    <div class="newsletter-area">
+                        <form action="" method="GET">
+                            <input type="text" name="cari" placeholder="Cari..">
+                            <button type="submit" class="newsletter-btn"><i class="fa fa-search"></i></button>
+                        </form>
+                    </div>
+                    </div>
+                </div>
                     <div class="car-list-content">
                         <div class="row">
                             <!-- Single Car Start -->
@@ -39,13 +50,26 @@
                                     return $hasil_rupiah;
                                      
                                 }
+                                if(isset($_GET['cari'])){
+                                    $cari = $_GET['cari'];
+                                    $query=$con->prepare("SELECT kendaraan.id,kendaraan.Nama_kendaraan,kendaraan.transmisi,kendaraan.Bahanbakar,kendaraan.Tahun_kendaraan,kendaraan.Harga_perhari,kendaraan.status,kendaraan.Merek_kendaraan,merek.NamaMerek,kendaraan.AirConditioner,kendaraan.Multimedia,kendaraan.gambar_kendaraan
+                                                        from  kendaraan INNER JOIN merek on merek.id=kendaraan.Merek_kendaraan 
+                                                        WHERE kendaraan.Nama_kendaraan like '%".$cari."%' or merek.NamaMerek like '%".$cari."%' 
+                                                        or kendaraan.transmisi like '%".$cari."%' or kendaraan.Bahanbakar like '%".$cari."%'
+                                                        or kendaraan.Tahun_kendaraan like '%".$cari."%' or kendaraan.Harga_perhari like '%".$cari."%'
+                                                        or kendaraan.AirConditioner like '%".$cari."%' or kendaraan.Multimedia like '%".$cari."%'
+                                                        order by kendaraan.id ASC LIMIT ?,?");
+                                    
+                                }
+                                else{
+                                    $query=$con->prepare("SELECT kendaraan.id,gambar_kendaraan,
+                                    Nama_kendaraan,Harga_perhari,NamaMerek,AirConditioner,
+                                    Bahanbakar,transmisi,Multimedia,status FROM kendaraan,merek 
+                                    WHERE kendaraan.Merek_kendaraan=merek.id ORDER BY kendaraan.id ASC LIMIT ?,?");
+                                }
                                 $batas=6;
                                 $pages=isset($_GET['halaman'])?(int)$_GET['halaman']:1;
                                 $mulai=($pages>1)?($pages*$batas)-$batas:0;
-                                $query=$con->prepare("SELECT kendaraan.id,gambar_kendaraan,
-                                Nama_kendaraan,Harga_perhari,NamaMerek,AirConditioner,
-                                Bahanbakar,transmisi,Multimedia,status FROM kendaraan,merek 
-                                WHERE kendaraan.Merek_kendaraan=merek.id ORDER BY kendaraan.id ASC LIMIT ?,?");
                                 $query->bind_param('ii',$mulai,$batas);
                                 $query->execute();
                                 $result=$query->get_result();

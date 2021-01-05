@@ -101,7 +101,7 @@
                                         ';
                                     } else{
                                         echo '
-                                            <li><a href="">Daftar</a></li>
+                                            <li><a href="register_form.php">Daftar</a></li>
                                             <li><a href="login.php?location='.urlencode($_SERVER['REQUEST_URI']).'">Masuk</a></li>
                                         ';
                                     }

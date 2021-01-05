@@ -80,7 +80,7 @@
               </div>
             </div>
             <div class="mt-5 text-muted text-center" style="margin-bottom: 50px;">
-              Belum Punya Akun? <a href="">Buat Sekarang</a>
+              Belum Punya Akun? <a href="register_form.php">Buat Sekarang</a>
             </div>  
           </div>
         </div>

@@ -53,16 +53,16 @@ else{
   <link rel="stylesheet" href="../assets/css/style.css">
   <link rel="stylesheet" href="../assets/css/components.css">
   <script type="text/javascript">
-    function valid()
-    {
-    if(document.chngpwd.newpassword.value!= document.chngpwd.confirmpassword.value)
-    {
-    alert("Password baru dan konfirmasi password salah!!");
-    document.chngpwd.confirmpassword.focus();
-    return false;
-    }
-    return true;
-    }
+      function valid()
+      {
+      if(document.chngpwd.newpassword.value!= document.chngpwd.confirmpassword.value)
+      {
+      alert("Password baru dan konfirmasi password salah!!");
+      document.chngpwd.confirmpassword.focus();
+      return false;
+      }
+      return true;
+      }
   </script>
 </head>
 

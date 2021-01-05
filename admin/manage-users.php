@@ -90,12 +90,13 @@ $msg="Data Berhasil dihapus";
         <!-- <a href="tambah-admin.php" class="btn btn-primary mb-3"><i class="fas fa-plus"></i> Tambah admin</a> -->
         <?php if($error){?><div class="alert alert-danger alert-dismissible fade show" role="alert">:<?php echo htmlentities($error); ?> </div><?php } 
 				else if($msg){?><div class="alert alert-success alert-dismissible fade show" role="alert"><?php echo htmlentities($msg); ?> </div><?php }?>
-        <table id="example1" class="table table-hover table-striped table-border">
+        <table id="example2" class="table table-hover table-striped table-border">
         <thead>
             <tr>
                 <th>No </th>
                 <th>Nama</th>
                 <th>Email</th>
+                <th>No KTP</th>
                 <th>No Telepon</th>
                 <th>Tanggal Daftar</th>
                 <th>Aksi</th>
@@ -116,8 +117,9 @@ $msg="Data Berhasil dihapus";
                     <td><?php echo htmlentities($cnt);?></td>
 					<td><?php echo htmlentities($result->NamaLengkap);?></td>
 					<td><?php echo htmlentities($result->Email);?></td>
+					<td><?php echo htmlentities($result->no_ktp);?></td>
 					<td><?php echo htmlentities($result->no_telepon);?></td>
-					<td><?php echo htmlentities($result->RedDate);?></td>
+					<td><?php echo htmlentities($result->RegDate);?></td>
                     <td>
                         <!-- <a href="edit-users.php?id=<?php echo $result->id_user;?>" class="btn btn-sm btn-primary"><i class="fas fa-edit"></i></a> -->
                         <a href="manage-users.php?del=<?php echo $result->id_user;?>" onclick="return confirm('Do you want to delete');" class="btn btn-sm btn-danger"><i class="fas fa-trash"></i></a>
@@ -177,7 +179,7 @@ $msg="Data Berhasil dihapus";
     $('#example2').DataTable({
       "paging": true,
       "lengthChange": false,
-      "searching": false,
+      "searching": true,
       "ordering": true,
       "info": true,
       "autoWidth": false,

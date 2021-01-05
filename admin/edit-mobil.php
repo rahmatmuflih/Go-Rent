@@ -195,7 +195,7 @@ else{
                             <br><img src="img/mobil/<?php echo htmlentities($result->gambar_kendaraan);?>" width="300" height="200" style="border:solid 1px #000">
                             <br><a href="ubahgambar.php?imgid=<?php echo htmlentities($result->id)?>">Ubah Gambar</a>
                         </div>
-                            <button Type="submit" name="submit" class="btn btn-primary mt-4">Simpan</button>
+                            <button Type="submit" name="submit" class="btn btn-primary mt-4">Update</button>
                             <button Type="reset" class="btn btn-danger mt-4">Reset</button>
                     </div>    
                 </div>
